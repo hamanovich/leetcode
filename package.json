@@ -1,0 +1,19 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "repository": "https://github.com/hamanovich/leetcode.git",
+  "author": "Siarhei Hamanovich <hamanovich@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prettier": "prettier --write ./src",
+    "test": "jest --all",
+    "jest:watch": "jest --watchAll"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "babel-jest": "^28.1.1",
+    "jest": "^28.1.1",
+    "prettier": "^2.7.1"
+  }
+}
