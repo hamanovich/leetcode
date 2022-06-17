@@ -7,7 +7,7 @@
   "scripts": {
     "prettier": "prettier --write ./src",
     "test": "jest --all",
-    "jest:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",
