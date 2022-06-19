@@ -1,17 +1,19 @@
 import { groupAnagrams } from './49-group-anagrams';
 
-test('groupAnagrams ["eat","tea","tan","ate","nat","bat"]', () => {
-  expect(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat'])).toBe([
-    ['bat'],
-    ['nat', 'tan'],
-    ['ate', 'eat', 'tea'],
-  ]);
-});
+describe('groupAnagrams', () => {
+  test('["eat","tea","tan","ate","nat","bat"]', () => {
+    expect(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat'])).toStrictEqual([
+      ['eat', 'tea', 'ate'],
+      ['tan', 'nat'],
+      ['bat'],
+    ]);
+  });
 
-test('groupAnagrams [""]', () => {
-  expect(groupAnagrams([''])).toBe([['']]);
-});
+  test('[""]', () => {
+    expect(groupAnagrams([''])).toStrictEqual([['']]);
+  });
 
-test('groupAnagrams ["a"]', () => {
-  expect(groupAnagrams(['a'])).toBe([['a']]);
+  test('["a"]', () => {
+    expect(groupAnagrams(['a'])).toStrictEqual([['a']]);
+  });
 });
