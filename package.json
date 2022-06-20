@@ -8,14 +8,20 @@
   "scripts": {
     "prettier": "prettier --write ./src",
     "test": "jest --all",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
     "@types/jest": "^28.1.2",
     "babel-jest": "^28.1.1",
+    "husky": ">=6",
     "jest": "^28.1.1",
+    "lint-staged": ">=10",
     "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }
