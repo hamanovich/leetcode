@@ -1,4 +1,5 @@
-import { removeNthFromEnd, ListNode } from './19-remove-nth-node-from-end';
+import { removeNthFromEnd } from './19-remove-nth-node-from-end';
+import { ListNode } from '../../utils/linked-list';
 
 describe('removeNthFromEnd', () => {
   test('head = [1,2,3,4,5], n = 2', () => {

@@ -1,4 +1,5 @@
-import { reverseList, reverseListRecursive, ListNode } from './206-reverse-linked-list';
+import { reverseList, reverseListRecursive } from './206-reverse-linked-list';
+import { ListNode } from '../../utils/linked-list';
 
 describe('reverseList', () => {
   const node = new ListNode(1);
