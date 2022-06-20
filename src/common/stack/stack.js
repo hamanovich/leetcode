@@ -15,7 +15,7 @@ export class Stack {
   }
 
   empty() {
-    return (this.#items.length = 0);
+    this.#items.length = 0;
   }
 
   size() {
