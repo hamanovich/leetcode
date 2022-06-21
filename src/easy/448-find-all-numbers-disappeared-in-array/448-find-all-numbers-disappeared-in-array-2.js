@@ -8,10 +8,13 @@
  * @return {number[]}
  */
 export const findDisappearedNumbers = nums => {
+  let count = 1;
   const result = [];
 
-  for (let i = 1; i <= nums.length; i++) {
-    if (nums.indexOf(i) < 0) result.push(i);
+  while (count <= nums.length) {
+    if (!nums.includes(count)) result.push(count);
+    count++;
   }
+
   return result;
 };

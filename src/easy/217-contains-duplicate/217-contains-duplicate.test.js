@@ -1,4 +1,5 @@
-import { containsDuplicate, containsDuplicate2 } from './217-contains-duplicate';
+import { containsDuplicate } from './217-contains-duplicate';
+import { containsDuplicate as containsDuplicate2 } from './217-contains-duplicate-2';
 
 describe('containsDuplicate', () => {
   test('nums = [1,2,3,1]', () => {

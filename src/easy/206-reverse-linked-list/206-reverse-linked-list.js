@@ -15,16 +15,3 @@ export const reverseList = head => {
 
   return prev;
 };
-
-/**
- * @param {ListNode} head
- * @return {ListNode}
- */
-export const reverseListRecursive = (head, prev = null) => {
-  if (head === null) return prev;
-
-  const temp = head.next;
-  head.next = prev;
-
-  return reverseListRecursive(temp, head);
-};

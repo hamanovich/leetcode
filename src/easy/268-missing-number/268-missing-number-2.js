@@ -4,8 +4,11 @@
  */
 export const missingNumber = nums => {
   const n = nums.length;
-  const sum = (n * (n + 1)) / 2;
-  const sumReduce = nums.reduce((a, b) => a + b);
+  let sum = (n * (n + 1)) / 2;
 
-  return sum - sumReduce;
+  for (let i = 0; i < n; i++) {
+    sum -= nums[i];
+  }
+
+  return sum;
 };

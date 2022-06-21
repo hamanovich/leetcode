@@ -1,8 +1,6 @@
-import {
-  findDisappearedNumbers,
-  findDisappearedNumbers2,
-  findDisappearedNumbers3,
-} from './448-find-all-numbers-disappeared-in-array';
+import { findDisappearedNumbers } from './448-find-all-numbers-disappeared-in-array';
+import { findDisappearedNumbers as findDisappearedNumbers2 } from './448-find-all-numbers-disappeared-in-array-2';
+import { findDisappearedNumbers as findDisappearedNumbers3 } from './448-find-all-numbers-disappeared-in-array-3';
 
 describe('findDisappearedNumbers', () => {
   test('nums = [4,3,2,7,8,2,3,1]', () => {

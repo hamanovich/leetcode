@@ -1,4 +1,5 @@
-import { missingNumber, missingNumber2 } from './268-missing-number';
+import { missingNumber } from './268-missing-number';
+import { missingNumber as missingNumber2 } from './268-missing-number-2';
 
 describe('missingNumber', () => {
   test('nums = [3,0,1]', () => {

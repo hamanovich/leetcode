@@ -1,4 +1,6 @@
-import { twoSum, twoSum2, twoSum3 } from './1-two-sum';
+import { twoSum } from './1-two-sum';
+import { twoSum as twoSum2 } from './1-two-sum-2';
+import { twoSum as twoSum3 } from './1-two-sum-3';
 
 describe('twoSum', () => {
   test('nums = [2,7,11,15], target = 9', () => {
@@ -8,8 +10,8 @@ describe('twoSum', () => {
   });
 
   test('nums = [3,2,4], target = 6', () => {
-    // expect(twoSum([3, 2, 4], 6)).toStrictEqual([1, 2]);
-    // expect(twoSum2([3, 2, 4], 6)).toStrictEqual([1, 2]);
+    expect(twoSum([3, 2, 4], 6)).toStrictEqual([1, 2]);
+    expect(twoSum2([3, 2, 4], 6)).toStrictEqual([1, 2]);
     expect(twoSum3([3, 2, 4], 6)).toStrictEqual([1, 2]);
   });
 
