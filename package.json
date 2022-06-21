@@ -8,8 +8,7 @@
   "scripts": {
     "prettier": "prettier --write ./src",
     "test": "jest --all",
-    "test:watch": "jest --watchAll",
-    "prepare": "husky install"
+    "test:watch": "jest --watchAll"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",
@@ -22,6 +21,9 @@
     "prettier": "^2.7.1"
   },
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
+    "*.js": [
+      "yarn prettier",
+      "yarn test"
+    ]
   }
 }
