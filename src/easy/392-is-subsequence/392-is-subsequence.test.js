@@ -5,6 +5,10 @@ describe('isSubsequence', () => {
     expect(isSubsequence('abc', 'ahsssbgdc')).toBeTruthy();
   });
 
+  test('s = "", t = ""', () => {
+    expect(isSubsequence('', '')).toBeTruthy();
+  });
+
   test('s = "axc", t = "ahbgdc"', () => {
     expect(isSubsequence('axc', 'ahbgdc')).toBeFalsy();
   });
