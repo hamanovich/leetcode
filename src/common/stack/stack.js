@@ -7,7 +7,7 @@ export class Stack {
 
   pop() {
     if (!this.#items.length) throw new RangeError('Underflow');
-    return this.#items.pop();
+    this.#items.pop();
   }
 
   isEmpty() {
@@ -24,5 +24,9 @@ export class Stack {
 
   peek() {
     return this.#items[this.#items.length - 1];
+  }
+
+  min() {
+    return Math.min(...this.#items);
   }
 }

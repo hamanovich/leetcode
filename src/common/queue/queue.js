@@ -6,6 +6,7 @@ export class Queue {
   }
 
   dequeue() {
+    if (!this.#items.length) throw new RangeError('Underflow');
     this.#items.pop();
   }
 
