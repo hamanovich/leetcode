@@ -1,5 +1,5 @@
 /**
- * @param {ListNode} head
+ * @param {LinkedListNode} head
  * @return {boolean}
  */
 export const hasCycle = head => {

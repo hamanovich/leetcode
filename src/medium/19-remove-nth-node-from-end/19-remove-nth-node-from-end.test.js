@@ -1,31 +1,63 @@
+import { LinkedList } from '../../common/linked-list/linked-list';
 import { removeNthFromEnd } from './19-remove-nth-node-from-end';
-import { ListNode } from '../../utils/linked-list';
+import { removeNthFromEnd as removeNthFromEnd2 } from './19-remove-nth-node-from-end-2';
 
 describe('removeNthFromEnd', () => {
-  test('head = [1,2,3,4,5], n = 2', () => {
-    const node = new ListNode(1);
-    node.next = new ListNode(2);
-    node.next.next = new ListNode(3);
-    node.next.next.next = new ListNode(4);
-    node.next.next.next.next = new ListNode(5);
+  const list = new LinkedList();
+  const listResult = new LinkedList();
 
-    const nodeResult = new ListNode(1);
-    nodeResult.next = new ListNode(2);
-    nodeResult.next.next = new ListNode(3);
-    nodeResult.next.next.next = new ListNode(5);
-    expect(removeNthFromEnd(node, 2)).toStrictEqual(nodeResult);
+  beforeEach(() => {
+    list.clear();
+    listResult.clear();
   });
 
-  test('head = [1], n = 1', () => {
-    expect(removeNthFromEnd(new ListNode(1), 1)).toBeNull();
+  test('#1: head = [1,2,3,4,5], n = 2', () => {
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+    list.append(5);
+    listResult.append(1);
+    listResult.append(2);
+    listResult.append(3);
+    listResult.append(5);
+    expect(removeNthFromEnd(list.head, 2)).toStrictEqual(listResult.head);
   });
 
-  test('head = [1,2], n = 1', () => {
-    const node = new ListNode(1);
-    node.next = new ListNode(2);
+  test('#2: head = [1,2,3,4,5], n = 2', () => {
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+    list.append(5);
+    listResult.append(1);
+    listResult.append(2);
+    listResult.append(3);
+    listResult.append(5);
+    expect(removeNthFromEnd2(list.head, 2)).toStrictEqual(listResult.head);
+  });
 
-    const nodeResult = new ListNode(1);
+  test('#1: head = [1], n = 1', () => {
+    list.append(1);
+    expect(removeNthFromEnd(list, 1)).toBeUndefined();
+  });
 
-    expect(removeNthFromEnd(node, 1)).toStrictEqual(nodeResult);
+  test('#2: head = [1], n = 1', () => {
+    list.append(1);
+    expect(removeNthFromEnd2(list, 1)).toBeUndefined();
+  });
+
+  test('#1: head = [1,2], n = 1', () => {
+    list.append(1);
+    list.append(2);
+    listResult.append(1);
+    expect(removeNthFromEnd(list.head, 1)).toStrictEqual(listResult.head);
+  });
+
+  test('#2: head = [1,2], n = 1', () => {
+    list.append(1);
+    list.append(2);
+    listResult.append(1);
+    expect(removeNthFromEnd2(list.head, 1)).toStrictEqual(listResult.head);
   });
 });

@@ -1,5 +1,5 @@
 /**
- * @param {ListNode} head
+ * @param {LinkedListNode} head
  * @return {number}
  */
 const getLength = head => {
@@ -12,9 +12,9 @@ const getLength = head => {
 };
 
 /**
- * @param {ListNode} head
+ * @param {LinkedListNode} head
  * @param {number} n
- * @return {ListNode}
+ * @return {LinkedListNode}
  */
 export const removeNthFromEnd = (head, n) => {
   let on = head;
@@ -29,6 +29,7 @@ export const removeNthFromEnd = (head, n) => {
     leftIndex--;
   }
 
-  on.next = on.next.next;
+  on.next = on.next?.next;
+
   return head;
 };

@@ -1,6 +1,6 @@
 /**
- * @param {ListNode} head
- * @return {ListNode}
+ * @param {LinkedListNode} head
+ * @return {LinkedListNode}
  */
 export const reverseList = head => {
   let prev = null;
