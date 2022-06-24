@@ -1,6 +1,5 @@
 /**
- * @param {LinkedListNode} list1
- * @param {LinkedListNode} list2
+ * @param {LinkedListNode} head
  * @return {LinkedListNode}
  */
 export const deleteDuplicates = head => {
