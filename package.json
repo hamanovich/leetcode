@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "prettier": "prettier --write ./src",
-    "test": "jest --all",
+    "test": "jest --all --passWithNoTests",
     "test:watch": "jest --watchAll"
   },
   "devDependencies": {
