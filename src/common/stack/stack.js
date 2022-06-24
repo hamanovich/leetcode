@@ -6,8 +6,7 @@ export class Stack {
   }
 
   pop() {
-    if (!this.#items.length) throw new RangeError('Underflow');
-    this.#items.pop();
+    this.#items.length && this.#items.pop();
   }
 
   isEmpty() {
@@ -28,5 +27,9 @@ export class Stack {
 
   min() {
     return Math.min(...this.#items);
+  }
+
+  toString() {
+    return this.#items.join('');
   }
 }

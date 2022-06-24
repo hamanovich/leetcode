@@ -6,8 +6,7 @@ export class Queue {
   }
 
   dequeue() {
-    if (!this.#items.length) throw new RangeError('Underflow');
-    this.#items.pop();
+    this.#items.length && this.#items.pop();
   }
 
   isEmpty() {
@@ -20,5 +19,9 @@ export class Queue {
 
   size() {
     return this.#items.length;
+  }
+
+  toString() {
+    return this.#items.join('');
   }
 }
