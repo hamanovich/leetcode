@@ -1,6 +1,10 @@
 export class Queue {
   #items = [];
 
+  constructor(items = []) {
+    this.#items = items;
+  }
+
   enqueue(item) {
     this.#items.splice(0, 0, item);
   }
@@ -19,6 +23,10 @@ export class Queue {
 
   size() {
     return this.#items.length;
+  }
+
+  peek() {
+    return this.#items[0];
   }
 
   toString() {
