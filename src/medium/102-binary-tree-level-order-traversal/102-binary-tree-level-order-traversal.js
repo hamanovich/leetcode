@@ -1,5 +1,5 @@
 /**
- * @param {TreeNode} root
+ * @param {BinaryTreeNode} root
  * @return {number[][]}
  */
 export const levelOrder = root => {

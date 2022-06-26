@@ -1,5 +1,5 @@
 /**
- * @param {TreeNode} root
+ * @param {BinaryTreeNode} root
  * @return {boolean}
  */
 export const isValidBST = (root, min = -Infinity, max = Infinity) => {

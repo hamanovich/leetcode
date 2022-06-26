@@ -1,7 +1,7 @@
 // DFS - Depth First Search
 
 /**
- * @param {TreeNode} root
+ * @param {BinaryTreeNode} root
  * @return {number}
  */
 export const maxDepth = root => {

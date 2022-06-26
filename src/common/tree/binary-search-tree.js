@@ -1,4 +1,4 @@
-import { TreeNode } from './tree-node.js';
+import { BinaryTreeNode } from './binary-tree-node.js';
 
 export class BinarySearchTree {
   constructor() {
@@ -6,7 +6,7 @@ export class BinarySearchTree {
   }
 
   insert(val) {
-    var node = new TreeNode(val);
+    var node = new BinaryTreeNode(val);
 
     if (!this.root) this.root = node;
     else this.insertNode(this.root, node);
