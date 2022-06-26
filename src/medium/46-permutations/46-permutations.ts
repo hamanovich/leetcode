@@ -1,11 +1,7 @@
-/**
- * @param {number[]} nums
- * @return {number[][]}
- */
-export const permute = (nums, n = 0) => {
+export const permute = (nums: number[], n = 0) => {
   if (n >= nums.length) return [[]];
 
-  const result = [];
+  const result: number[][] = [];
   const prevs = permute(nums, n + 1);
 
   for (let prev of prevs) {
