@@ -1,4 +1,4 @@
-import { romanToInt } from './13_roman-to-integer';
+import { romanToInt } from './13-roman-to-integer';
 
 describe('romanToInt', () => {
   test('XVIV equal 19', () => {
