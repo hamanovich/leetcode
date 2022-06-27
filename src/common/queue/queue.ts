@@ -1,11 +1,11 @@
-export class Queue {
-  #items = [];
+export class Queue<T> {
+  #items: T[] = [];
 
   constructor(items = []) {
     this.#items = items;
   }
 
-  enqueue(item) {
+  enqueue(item: T) {
     this.#items.splice(0, 0, item);
   }
 
@@ -26,6 +26,8 @@ export class Queue {
   }
 
   peek() {
+    if (this.isEmpty()) return null;
+
     return this.#items[0];
   }
 
