@@ -4,7 +4,8 @@ export const isHappy = (n: number): boolean => {
 
   while (!set.has(n)) {
     set.add(n);
-    let s = n.toString();
+
+    const s = n.toString();
     n = 0;
 
     for (let i = 0; i < s.length; ++i) n += squares[Number(s[i])];

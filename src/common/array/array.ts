@@ -39,8 +39,8 @@ export class Array<T> {
   }
 
   clear() {
-    for (let prop in this.data) {
-      if (this.data.hasOwnProperty(prop)) {
+    for (const prop in this.data) {
+      if (Object.prototype.hasOwnProperty.call(this.data, prop)) {
         delete this.data[prop];
       }
     }

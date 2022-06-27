@@ -1,5 +1,3 @@
-import { TreeNode } from '../../common/tree/tree-node.js';
-
 /**
  * @param {TreeNode|null} root
  * @return {number[]}

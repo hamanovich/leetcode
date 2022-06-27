@@ -1,7 +1,7 @@
-import { Array } from './array';
+import { Array as MyArray } from './array';
 
 describe('array', () => {
-  const array = new Array();
+  const array = new MyArray();
 
   beforeEach(() => array.clear());
 

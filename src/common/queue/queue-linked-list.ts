@@ -30,7 +30,7 @@ export class Queue<T> {
     return this.#list.toArray().map(node => node.value);
   }
 
-  toString(callback?: Function) {
+  toString(callback?: <T>(arg?: T) => T) {
     return this.#list.toString(callback);
   }
 }
