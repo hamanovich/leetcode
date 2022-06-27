@@ -1,11 +1,7 @@
 import { LinkedList } from '../linked-list/linked-list';
 
 export class Queue<T> {
-  #list;
-
-  constructor() {
-    this.#list = new LinkedList();
-  }
+  #list = new LinkedList();
 
   enqueue(item: T) {
     this.#list.append(item);
@@ -28,6 +24,10 @@ export class Queue<T> {
     if (this.isEmpty()) return null;
 
     return this.#list.head.value;
+  }
+
+  toArray() {
+    return this.#list.toArray().map(node => node.value);
   }
 
   toString(callback?: Function) {

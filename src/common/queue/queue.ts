@@ -1,10 +1,6 @@
 export class Queue<T> {
   #items: T[] = [];
 
-  constructor(items = []) {
-    this.#items = items;
-  }
-
   enqueue(item: T) {
     this.#items.splice(0, 0, item);
   }
