@@ -30,6 +30,7 @@
     "coverage": "jest --coverage",
     "test": "jest -o --passWithNoTests",
     "test:watch": "jest --watchAll",
+    "lint": "eslint --cache --cache-location=.cache/eslint",
     "ts": "ts-node"
   },
   "devDependencies": {
@@ -37,7 +38,12 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-typescript": "^7.17.12",
     "@types/jest": "^28.1.2",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
     "babel-jest": "^28.1.1",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.5.3",
     "husky": ">=6",
     "jest": "^28.1.1",
     "lint-staged": ">=10",
@@ -48,6 +54,7 @@
   "lint-staged": {
     "*.{ts, js}": [
       "yarn prettier",
+      "yarn lint",
       "yarn test"
     ]
   },
