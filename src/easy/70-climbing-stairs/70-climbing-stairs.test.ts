@@ -21,4 +21,9 @@ describe('climbStairs', () => {
     expect(climbStairs(5)).toBe(8);
     expect(climbStairs2(5)).toBe(8);
   });
+
+  test('n = 1', () => {
+    expect(climbStairs(1)).toBe(1);
+    expect(climbStairs2(1)).toBe(1);
+  });
 });

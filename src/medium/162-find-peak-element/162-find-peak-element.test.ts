@@ -11,4 +11,9 @@ describe('findPeakElement', () => {
     expect(findPeakElement([1, 2, 1, 3, 5, 6, 4])).toBe(5);
     expect(findPeakElement2([1, 2, 1, 3, 5, 6, 4])).toBe(1);
   });
+
+  test('nums = [1,2,3]', () => {
+    expect(findPeakElement([])).toBe(0);
+    expect(findPeakElement2([])).toBe(-1);
+  });
 });

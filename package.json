@@ -27,8 +27,8 @@
   "scripts": {
     "build": "tsc",
     "prettier": "prettier --write ./src",
-    "coverage": "yarn test --coverage",
-    "test": "jest --all --passWithNoTests",
+    "coverage": "jest --coverage",
+    "test": "jest -o --passWithNoTests",
     "test:watch": "jest --watchAll",
     "ts": "ts-node"
   },

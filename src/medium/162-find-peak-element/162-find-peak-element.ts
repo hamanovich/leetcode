@@ -1,8 +1,4 @@
-/**
- * @param {number[]} nums
- * @return {number}
- */
-export const findPeakElement = nums => {
+export const findPeakElement = (nums: number[]) => {
   let left = 0;
   let right = nums.length - 1;
 

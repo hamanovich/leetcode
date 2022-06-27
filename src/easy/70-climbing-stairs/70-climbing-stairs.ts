@@ -1,8 +1,4 @@
-/**
- * @param {number} n
- * @return {number}
- */
-export const climbStairs = n => {
+export const climbStairs = (n: number) => {
   if (n === 1) return 1;
 
   let n1 = 1;
