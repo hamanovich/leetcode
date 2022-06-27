@@ -1,5 +1,8 @@
 # JavaScript Algorithms and Data Structures
 
+[![CI](https://github.com/hamanovich/leetcode/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/hamanovich/leetcode/actions/workflows/CI.yml)
+[![codecov](https://codecov.io/gh/hamanovich/leetcode/branch/main/graph/badge.svg?token=WI7WGV8S0B)](https://codecov.io/gh/hamanovich/leetcode)
+
 ## Leetcode practical examples
 
 ## Useful Information
