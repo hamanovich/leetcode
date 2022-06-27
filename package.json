@@ -1,13 +1,33 @@
 {
   "name": "leetcode",
   "version": "1.0.0",
-  "repository": "https://github.com/hamanovich/leetcode.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamanovich/leetcode.git"
+  },
   "author": "Siarhei Hamanovich <hamanovich@gmail.com>",
   "license": "MIT",
   "type": "module",
+  "keywords": [
+    "computer-science",
+    "cs",
+    "algorithms",
+    "data-structures",
+    "javascript",
+    "algorithm",
+    "javascript-algorithms",
+    "sorting-algorithms",
+    "graph",
+    "tree"
+  ],
+  "bugs": {
+    "url": "https://github.com/hamanovich/leetcode/issues"
+  },
+  "homepage": "https://github.com/hamanovich/leetcode#readme",
   "scripts": {
     "build": "tsc",
     "prettier": "prettier --write ./src",
+    "coverage": "yarn test --coverage",
     "test": "jest --all --passWithNoTests",
     "test:watch": "jest --watchAll",
     "ts": "ts-node"
@@ -31,7 +51,8 @@
       "yarn test"
     ]
   },
-  "jest": {
-    "modulePathIgnorePatterns": ["<rootDir>/dist/"]
+  "engines": {
+    "node": ">=16.10.0",
+    "npm": ">=8.0.0"
   }
 }
