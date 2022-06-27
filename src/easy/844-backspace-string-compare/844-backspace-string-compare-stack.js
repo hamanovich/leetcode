@@ -1,4 +1,4 @@
-import { Stack } from '../../common/stack/stack.js';
+import { Stack } from '../../common/stack/stack';
 
 /**
  * @param {string} str

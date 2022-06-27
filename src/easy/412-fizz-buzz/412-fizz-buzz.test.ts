@@ -2,7 +2,6 @@ import { fizzBuzz } from './412-fizz-buzz';
 
 describe('fizzBuzz', () => {
   test('n = 3', () => {
-    console.log('fi', fizzBuzz(3));
     expect(fizzBuzz(3)).toStrictEqual(['1', '2', 'Fizz']);
   });
 

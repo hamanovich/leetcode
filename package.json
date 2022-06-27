@@ -30,5 +30,8 @@
       "yarn prettier",
       "yarn test"
     ]
+  },
+  "jest": {
+    "modulePathIgnorePatterns": ["<rootDir>/dist/"]
   }
 }
