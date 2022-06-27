@@ -1,4 +1,4 @@
-import { Stack } from './stack';
+import { Stack } from './stack-linked-list';
 
 describe('stack', () => {
   const stack = new Stack();
@@ -7,13 +7,13 @@ describe('stack', () => {
 
   test('push', () => {
     stack.push(1);
-    expect(stack.size()).toBe(1);
+    stack.push(2);
+    expect(stack.toString()).toBe('2,1');
     expect(stack.isEmpty()).toBeFalsy();
   });
 
   test('pop', () => {
     stack.push(1);
-    expect(stack.size()).toBe(1);
     stack.pop();
     expect(stack.isEmpty()).toBeTruthy();
   });
@@ -31,13 +31,6 @@ describe('stack', () => {
     expect(stack.isEmpty).toBeTruthy();
   });
 
-  test('size', () => {
-    stack.push(1);
-    expect(stack.size()).toBe(1);
-    stack.pop();
-    expect(stack.size()).toBe(0);
-  });
-
   test('peek', () => {
     stack.push(1);
     expect(stack.peek()).toBe(1);
@@ -45,11 +38,13 @@ describe('stack', () => {
     expect(stack.peek()).toBe(2);
   });
 
-  test('min', () => {
+  it('should be possible to convert stack to array', () => {
+    expect(stack.peek()).toBeNull();
+
     stack.push(1);
     stack.push(2);
-    stack.push(-1);
     stack.push(3);
-    expect(stack.min()).toBe(-1);
+
+    expect(stack.toArray()).toEqual([3, 2, 1]);
   });
 });

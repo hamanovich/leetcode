@@ -1,7 +1,7 @@
-export class Stack {
-  #items = [];
+export class Stack<T> {
+  #items: T[] = [];
 
-  push(element) {
+  push(element: T) {
     this.#items.push(element);
   }
 
@@ -23,10 +23,6 @@ export class Stack {
 
   peek() {
     return this.#items[this.#items.length - 1];
-  }
-
-  min() {
-    return Math.min(...this.#items);
   }
 
   toString() {
