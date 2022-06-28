@@ -1,9 +1,9 @@
 import { LinkedList } from '../linked-list/linked-list';
 
-export class Queue<T> {
+export class Queue {
   #list = new LinkedList();
 
-  enqueue(item: T) {
+  enqueue(item: number) {
     this.#list.append(item);
   }
 
@@ -23,7 +23,7 @@ export class Queue<T> {
   peek() {
     if (this.isEmpty()) return null;
 
-    return this.#list.head.value;
+    return this.#list.head?.value;
   }
 
   toArray() {

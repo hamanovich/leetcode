@@ -1,12 +1,15 @@
 import { LinkedListNode } from './linked-list-node';
 
 export class LinkedList {
+  head: LinkedListNode | null;
+  tail: LinkedListNode | null;
+
   constructor() {
     this.head = null;
     this.tail = null;
   }
 
-  prepend(value) {
+  prepend(value: number) {
     const node = new LinkedListNode(value, this.head);
     this.head = node;
 
@@ -15,7 +18,7 @@ export class LinkedList {
     return this;
   }
 
-  append(value) {
+  append(value: number) {
     const node = new LinkedListNode(value);
 
     if (!this.head || !this.tail) {
@@ -31,9 +34,7 @@ export class LinkedList {
     return this;
   }
 
-  find(value) {
-    if (!this.head) return null;
-
+  find(value: number) {
     let currentNode = this.head;
 
     while (currentNode) {
@@ -56,13 +57,13 @@ export class LinkedList {
     return length;
   }
 
-  fromArray(values) {
+  fromArray(values: number[]) {
     values.forEach(value => this.append(value));
 
     return this;
   }
 
-  delete(value) {
+  delete(value: number) {
     if (!this.head) return null;
 
     let deletedNode = null;
@@ -104,7 +105,7 @@ export class LinkedList {
 
     let currentNode = this.head;
 
-    while (currentNode.next) {
+    while (currentNode?.next) {
       if (!currentNode.next.next) {
         currentNode.next = null;
       } else {
@@ -149,7 +150,7 @@ export class LinkedList {
     return nodes;
   }
 
-  toString(callback) {
+  toString(callback?: <T>(arg?: T) => T) {
     return this.toArray()
       .map(node => node.toString(callback))
       .toString();
