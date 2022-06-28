@@ -16,4 +16,8 @@ describe('nextGreatestLetter', () => {
   test('letters = ["c","f","j"], target = "d"', () => {
     expect(nextGreatestLetter(['c', 'f', 'j'], 'd')).toBe('f');
   });
+
+  test('letters = ["c","c","c"], target = "d"', () => {
+    expect(nextGreatestLetter(['c', 'c', 'c'], 'd')).toBe('c');
+  });
 });

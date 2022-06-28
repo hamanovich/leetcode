@@ -1,9 +1,4 @@
-/**
- * @param {character[]} letters
- * @param {character} target
- * @return {character}
- */
-export const nextGreatestLetter = (letters, target) => {
+export const nextGreatestLetter = (letters: string[], target: string) => {
   if (letters.length === 1) return letters[0];
 
   let left = 0;

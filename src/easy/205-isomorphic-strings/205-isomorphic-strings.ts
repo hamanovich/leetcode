@@ -1,9 +1,4 @@
-/**
- * @param {string} s
- * @param {string} t
- * @return {boolean}
- */
-export const isIsomorphic = (s, t) => {
+export const isIsomorphic = (s: string, t: string) => {
   const map1 = new Map();
   const map2 = new Map();
 
@@ -16,9 +11,7 @@ export const isIsomorphic = (s, t) => {
       }
 
       continue;
-    } else if (map2.get(t[i])) {
-      return false;
-    }
+    } else if (map2.get(t[i])) return false;
 
     map1.set(s[i], t[i]);
     map2.set(t[i], s[i]);

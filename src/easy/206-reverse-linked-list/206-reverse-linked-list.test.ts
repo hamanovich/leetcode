@@ -1,3 +1,4 @@
+import { LinkedListNode } from './../../common/linked-list/linked-list-node';
 import { LinkedList } from '../../common/linked-list/linked-list';
 import { reverseList } from './206-reverse-linked-list';
 import { reverseList as reverseListRecursive } from './206-reverse-linked-list-2';
@@ -23,7 +24,7 @@ describe('reverseList', () => {
   });
 
   test('head = [1,2,3,4,5] while loop', () => {
-    expect(reverseList(list.head)).toStrictEqual(listResult.head);
+    expect(reverseList(list.head as LinkedListNode)).toStrictEqual(listResult.head);
   });
 
   test('head = [1,2,3,4,5] recursively', () => {

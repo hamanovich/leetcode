@@ -1,11 +1,6 @@
-/**
- * @param {string} s
- * @param {string} t
- * @return {boolean}
- */
-export const isIsomorphic = (s, t) => {
-  const hash1 = {};
-  const hash2 = {};
+export const isIsomorphic = (s: string, t: string) => {
+  const hash1: Record<string, string> = {};
+  const hash2: Record<string, string> = {};
 
   if (s.length !== t.length) return false;
 

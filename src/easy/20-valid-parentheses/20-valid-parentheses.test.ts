@@ -12,4 +12,8 @@ describe('isValid', () => {
   test('(] equal false', () => {
     expect(isValid('(]')).toBeFalsy();
   });
+
+  test('a equal false', () => {
+    expect(isValid('a')).toBeFalsy();
+  });
 });
