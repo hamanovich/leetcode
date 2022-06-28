@@ -32,6 +32,7 @@
     "test:all": "jest --all --passWithNoTests",
     "test:watch": "jest --watchAll",
     "lint": "eslint --cache --cache-location=.cache/eslint",
+    "lint:nocache": "eslint .",
     "ts": "ts-node"
   },
   "devDependencies": {

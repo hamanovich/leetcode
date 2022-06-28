@@ -1,12 +1,7 @@
 import { LinkedListNode } from '../../common/linked-list/linked-list-node';
 
-/**
- * @param {LinkedListNode} head
- * @param {number} val
- * @return {LinkedListNode}
- */
-export const removeElements = (head, val) => {
-  let result = new LinkedListNode(0);
+export const removeElements = (head: LinkedListNode | null, val: number) => {
+  const result = new LinkedListNode(0);
   let current = result;
 
   result.next = head;

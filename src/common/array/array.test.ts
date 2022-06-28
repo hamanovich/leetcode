@@ -30,8 +30,9 @@ describe('array', () => {
     array.push(2);
     array.push(3);
     array.delete(2);
-    expect(array.length).toBe(2);
-    expect(array.get(1)).toBe(2);
+    array.delete();
+    expect(array.length).toBe(1);
+    expect(array.get(0)).toBe(1);
   });
 
   test('insert', () => {
