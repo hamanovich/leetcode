@@ -1,3 +1,4 @@
+import { LinkedListNode } from './../../common/linked-list/linked-list-node';
 import { LinkedList } from '../../common/linked-list/linked-list';
 import { removeNthFromEnd } from './19-remove-nth-node-from-end';
 import { removeNthFromEnd as removeNthFromEnd2 } from './19-remove-nth-node-from-end-2';
@@ -21,7 +22,7 @@ describe('removeNthFromEnd', () => {
     listResult.append(2);
     listResult.append(3);
     listResult.append(5);
-    expect(removeNthFromEnd(list.head, 2)).toStrictEqual(listResult.head);
+    expect(removeNthFromEnd(list.head as LinkedListNode, 2)).toStrictEqual(listResult.head);
   });
 
   test('#2: head = [1,2,3,4,5], n = 2', () => {
@@ -34,30 +35,30 @@ describe('removeNthFromEnd', () => {
     listResult.append(2);
     listResult.append(3);
     listResult.append(5);
-    expect(removeNthFromEnd2(list.head, 2)).toStrictEqual(listResult.head);
+    expect(removeNthFromEnd2(list.head as LinkedListNode, 2)).toStrictEqual(listResult.head);
   });
 
   test('#1: head = [1], n = 1', () => {
     list.append(1);
-    expect(removeNthFromEnd(list, 1)).toBeUndefined();
+    expect(removeNthFromEnd(list.head as LinkedListNode, 1)).toBeNull();
   });
 
   test('#2: head = [1], n = 1', () => {
     list.append(1);
-    expect(removeNthFromEnd2(list, 1)).toBeUndefined();
+    expect(removeNthFromEnd2(list.head as LinkedListNode, 1)).toBeNull();
   });
 
   test('#1: head = [1,2], n = 1', () => {
     list.append(1);
     list.append(2);
     listResult.append(1);
-    expect(removeNthFromEnd(list.head, 1)).toStrictEqual(listResult.head);
+    expect(removeNthFromEnd(list.head as LinkedListNode, 1)).toStrictEqual(listResult.head);
   });
 
   test('#2: head = [1,2], n = 1', () => {
     list.append(1);
     list.append(2);
     listResult.append(1);
-    expect(removeNthFromEnd2(list.head, 1)).toStrictEqual(listResult.head);
+    expect(removeNthFromEnd2(list.head as LinkedListNode, 1)).toStrictEqual(listResult.head);
   });
 });
