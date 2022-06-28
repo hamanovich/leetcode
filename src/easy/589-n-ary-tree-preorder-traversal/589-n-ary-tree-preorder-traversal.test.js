@@ -1,6 +1,6 @@
-import { TreeNode } from '../../common/tree/tree-node.js';
-import { preorder } from './589-n-ary-tree-preorder-traversal.js';
-import { preorder as preorder2 } from './589-n-ary-tree-preorder-traversal-2.js';
+import { TreeNode } from '../../common/tree/tree-node';
+import { preorder } from './589-n-ary-tree-preorder-traversal';
+import { preorder as preorder2 } from './589-n-ary-tree-preorder-traversal-2';
 
 describe('preorder', () => {
   test('root = [1,null,3,2,4,null,5,6]', () => {

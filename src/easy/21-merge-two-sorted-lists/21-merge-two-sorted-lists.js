@@ -1,4 +1,4 @@
-import { LinkedListNode } from '../../common/linked-list/linked-list-node.js';
+import { LinkedListNode } from '../../common/linked-list/linked-list-node';
 
 /**
  * @param {LinkedListNode} list1

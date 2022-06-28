@@ -1,5 +1,5 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node.js';
-import { levelOrder } from './102-binary-tree-level-order-traversal.js';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { levelOrder } from './102-binary-tree-level-order-traversal';
 
 describe('levelOrder', () => {
   test('root = [3,9,20,null,null,15,7]', () => {

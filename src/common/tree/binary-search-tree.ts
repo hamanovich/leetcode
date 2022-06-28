@@ -1,32 +1,35 @@
-import { BinaryTreeNode } from './binary-tree-node.js';
+import { BinaryTreeNode } from './binary-tree-node';
 
 export class BinarySearchTree {
+  root: BinaryTreeNode | null;
+
   constructor() {
     this.root = null;
   }
 
-  insert(val) {
-    var node = new BinaryTreeNode(val);
+  insert(val: number) {
+    const node = new BinaryTreeNode(val);
 
     if (!this.root) this.root = node;
     else this.insertNode(this.root, node);
   }
 
-  insertNode(node, newNode) {
-    if (newNode.val < node.val) {
-      if (!node.left) node.left = newNode;
+  insertNode(node: BinaryTreeNode | null, newNode: BinaryTreeNode | null) {
+    if (!newNode && !node) return;
+    if (!!newNode?.val < !!node?.val) {
+      if (!node?.left) node && (node.left = newNode);
       else this.insertNode(node.left, newNode);
     } else {
-      if (!node.right) node.right = newNode;
+      if (!node?.right) node && (node.right = newNode);
       else this.insertNode(node.right, newNode);
     }
   }
 
-  remove(data) {
+  remove(data: number) {
     this.root = this.removeNode(this.root, data);
   }
 
-  removeNode(node, key) {
+  removeNode(node: BinaryTreeNode | null, key: number) {
     if (!node) return null;
 
     if (key < node.val) {
@@ -60,7 +63,7 @@ export class BinarySearchTree {
     return node;
   }
 
-  findMinNode(node) {
+  findMinNode(node: BinaryTreeNode): BinaryTreeNode {
     if (!node.left) return node;
     return this.findMinNode(node.left);
   }
@@ -69,7 +72,7 @@ export class BinarySearchTree {
     return this.root;
   }
 
-  search(node, data) {
+  search(node: BinaryTreeNode | null, data: number): BinaryTreeNode | null {
     if (!node) return null;
     if (data < node.val) return this.search(node.left, data);
     if (data > node.val) return this.search(node.right, data);

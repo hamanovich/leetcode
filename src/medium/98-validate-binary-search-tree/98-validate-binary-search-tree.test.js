@@ -1,5 +1,5 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node.js';
-import { isValidBST } from './98-validate-binary-search-tree.js';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { isValidBST } from './98-validate-binary-search-tree';
 
 describe('isValidBST', () => {
   test('root = [2,1,3]', () => {

@@ -29,6 +29,7 @@
     "prettier": "prettier --write ./src",
     "coverage": "jest --coverage",
     "test": "jest -o --passWithNoTests",
+    "test:all": "jest --all --passWithNoTests",
     "test:watch": "jest --watchAll",
     "lint": "eslint --cache --cache-location=.cache/eslint",
     "ts": "ts-node"

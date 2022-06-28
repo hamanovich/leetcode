@@ -1,4 +1,4 @@
-import { NumArray } from './303-range-sum-query-immutable.js';
+import { NumArray } from './303-range-sum-query-immutable';
 
 describe('NumArray', () => {
   test('[[[-2, 0, 3, -5, 2, -1]], [0, 2], [2, 5], [0, 5]]', () => {

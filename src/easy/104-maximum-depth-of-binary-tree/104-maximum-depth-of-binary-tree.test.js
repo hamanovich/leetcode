@@ -1,6 +1,6 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node.js';
-import { maxDepth } from './104-maximum-depth-of-binary-tree.js';
-import { maxDepth as maxDepth2 } from './104-maximum-depth-of-binary-tree-2.js';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { maxDepth } from './104-maximum-depth-of-binary-tree';
+import { maxDepth as maxDepth2 } from './104-maximum-depth-of-binary-tree-2';
 
 describe('maxDepth', () => {
   test('root = [3,9,20,null,null,15,7]', () => {

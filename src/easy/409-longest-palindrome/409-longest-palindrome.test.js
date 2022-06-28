@@ -1,5 +1,5 @@
-import { longestPalindrome } from './409-longest-palindrome.js';
-import { longestPalindrome as longestPalindrome2 } from './409-longest-palindrome-2.js';
+import { longestPalindrome } from './409-longest-palindrome';
+import { longestPalindrome as longestPalindrome2 } from './409-longest-palindrome-2';
 
 describe('longestPalindrome', () => {
   test('s = "abccccdd"', () => {

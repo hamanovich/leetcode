@@ -1,4 +1,4 @@
-import { sortedSquares } from './977-squares-of-a-sorted-array.js';
+import { sortedSquares } from './977-squares-of-a-sorted-array';
 
 describe('sortedSquares', () => {
   test('nums = [-4]', () => {
