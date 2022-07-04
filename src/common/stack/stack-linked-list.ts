@@ -1,6 +1,6 @@
 import { LinkedList } from '../linked-list/linked-list';
 
-export class Stack<T> {
+export class Stack<T = unknown> {
   #list = new LinkedList();
 
   push(element: T) {
