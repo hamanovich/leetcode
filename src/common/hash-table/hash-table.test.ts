@@ -14,15 +14,25 @@ describe('HashTable', () => {
     expect(object.prop2).toBe('b');
   });
 
-  it('get and remove', () => {
+  it('get', () => {
+    ht.set('a', 'prop-a');
+    ht.set('a', 'prop-aa');
+    ht.set('Spain', 110);
+    ht.set('ǻ', 192);
+    expect(ht.get('a')).toBe('prop-aa');
+    expect(ht.size).toBe(3);
+  });
+
+  it('remove', () => {
     ht.set('a', 'prop-a');
     ht.set('b', 'prop-b');
     ht.set('c', 'prop-c');
-
     expect(ht.get('a')).toBe('prop-a');
 
     ht.remove('a');
-
     expect(ht.get('a')).toBeUndefined();
+
+    ht.remove('x');
+    expect(ht.get('x')).toBeUndefined();
   });
 });

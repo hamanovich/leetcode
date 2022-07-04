@@ -1,9 +1,4 @@
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
-export const twoSum = (nums, target) => {
+export const twoSum = (nums: number[], target: number): number[] => {
   let left = 0;
   let right = nums.length - 1;
 

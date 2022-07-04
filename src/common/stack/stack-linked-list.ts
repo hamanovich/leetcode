@@ -24,14 +24,14 @@ export class Stack<T> {
   peek() {
     if (this.isEmpty()) return null;
 
-    return this.#list.head.value;
+    return this.#list.head?.value;
   }
 
   toArray() {
-    return this.#list.toArray().map(node => node.value);
+    return this.#list.toArray()?.map(node => node.value);
   }
 
-  toString(callback?: <T>(arg?: T) => T) {
+  toString(callback?: <T>(arg: T) => string) {
     return this.#list.toString(callback);
   }
 }

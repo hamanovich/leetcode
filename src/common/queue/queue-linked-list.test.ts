@@ -43,4 +43,18 @@ describe('Queue', () => {
     expect(queue.dequeue()).toBeNull();
     expect(queue.isEmpty()).toBe(true);
   });
+
+  test('toString', () => {
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+    expect(queue.toString()).toBe('1,2,3');
+  });
+
+  test('toArray', () => {
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+    expect(queue.toArray()).toStrictEqual([1, 2, 3]);
+  });
 });

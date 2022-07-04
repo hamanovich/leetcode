@@ -27,10 +27,10 @@ export class Queue {
   }
 
   toArray() {
-    return this.#list.toArray().map(node => node.value);
+    return this.#list.toArray()?.map(node => node.value);
   }
 
-  toString(callback?: <T>(arg?: T) => T) {
+  toString(callback?: <T>(arg: T) => string) {
     return this.#list.toString(callback);
   }
 }

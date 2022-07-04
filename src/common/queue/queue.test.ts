@@ -22,6 +22,14 @@ describe('queue', () => {
     expect(queue.isEmpty()).toBeTruthy();
   });
 
+  test('peek', () => {
+    expect(queue.peek()).toBeNull();
+
+    queue.enqueue(1);
+    queue.enqueue(2);
+    expect(queue.peek()).toBe(2);
+  });
+
   test('empty', () => {
     queue.enqueue(1);
     expect(queue.isEmpty()).toBeFalsy();
@@ -32,5 +40,12 @@ describe('queue', () => {
   test('size', () => {
     queue.enqueue(1);
     expect(queue.size()).toBe(1);
+  });
+
+  test('toString', () => {
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+    expect(queue.toString()).toBe('321');
   });
 });

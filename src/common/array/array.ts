@@ -28,6 +28,8 @@ export class Array<T> {
   }
 
   delete(index = this.length) {
+    if (!this.length) return;
+
     for (let i = index; i < this.length - 1; i++) {
       this.data[i] = this.data[i + 1];
     }

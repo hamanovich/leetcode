@@ -70,11 +70,4 @@ export class HashTable<T> {
       }
     } else return false;
   }
-
-  show() {
-    this.table.forEach((values, index) => {
-      const chainedValues = values.map(([key, value]: [string, T]) => `[ ${key}: ${value} ]`);
-      console.log(`${index}: ${chainedValues}`);
-    });
-  }
 }

@@ -1,6 +1,10 @@
 import { countBits } from './338-counting-bits';
 
 describe('countBits', () => {
+  test('n = 0', () => {
+    expect(countBits(0)).toStrictEqual([0]);
+  });
+
   test('n = 5', () => {
     expect(countBits(5)).toStrictEqual([0, 1, 1, 2, 1, 2]);
   });

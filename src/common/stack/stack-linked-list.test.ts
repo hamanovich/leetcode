@@ -16,6 +16,8 @@ describe('stack', () => {
     stack.push(1);
     stack.pop();
     expect(stack.isEmpty()).toBeTruthy();
+    stack.pop();
+    expect(stack.isEmpty()).toBeTruthy();
   });
 
   test('isEmpty', () => {

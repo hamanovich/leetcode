@@ -1,8 +1,4 @@
-/**
- * @param {number} n
- * @return {number[]}
- */
-export const countBits = n => {
+export const countBits = (n: number): number[] => {
   const res = [0];
 
   if (n === 0) return res;
