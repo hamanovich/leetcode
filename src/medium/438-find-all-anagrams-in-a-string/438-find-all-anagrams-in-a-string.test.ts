@@ -14,4 +14,10 @@ describe('findAnagrams', () => {
     expect(findAnagramsSlidingWindowWhile('abab', 'ab')).toStrictEqual([0, 1, 2]);
     expect(findAnagramsSlidingWindowFor('abab', 'ab')).toStrictEqual([0, 1, 2]);
   });
+
+  test('Input: s = "asdfghasdddfghasdfgh", p = "ddf"; Output: [9]', () => {
+    expect(findAnagrams('asdfghasdddfghasdfgh', 'ddf')).toStrictEqual([9]);
+    expect(findAnagramsSlidingWindowWhile('asdfghasdddfghasdfgh', 'ddf')).toStrictEqual([9]);
+    expect(findAnagramsSlidingWindowFor('asdfghasdddfghasdfgh', 'ddf')).toStrictEqual([9]);
+  });
 });
