@@ -4,11 +4,7 @@ export const findAnagrams = (s: string, p: string): number[] => {
   const output: number[] = [];
   const chars: Record<string, number> = {};
 
-  for (const char of p) {
-    if (char in chars) {
-      chars[char]++;
-    } else chars[char] = 1;
-  }
+  for (const char of p) chars[char] = chars[char] + 1 || 1;
 
   let left = 0;
   let right = 0;
