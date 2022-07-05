@@ -1,9 +1,7 @@
-/**
- * @param {number[]} nums
- * @return {number[][]}
- */
-export const threeSum = nums => {
-  const result = [];
+// https://leetcode.com/problems/3sum/
+
+export const threeSum = (nums: number[]): number[][] => {
+  const output = [];
 
   nums.sort((a, b) => a - b);
 
@@ -14,10 +12,10 @@ export const threeSum = nums => {
     if (i > 0 && nums[i] === nums[i - 1]) continue;
 
     while (left < right) {
-      let total = nums[i] + nums[left] + nums[right];
+      const total = nums[i] + nums[left] + nums[right];
 
       if (total === 0) {
-        result.push([nums[i], nums[left], nums[right]]);
+        output.push([nums[i], nums[left], nums[right]]);
 
         while (nums[right - 1] === nums[right]) right--;
         while (nums[left + 1] === nums[left]) left++;
@@ -29,5 +27,5 @@ export const threeSum = nums => {
     }
   }
 
-  return result;
+  return output;
 };
