@@ -20,4 +20,10 @@ describe('findAnagrams', () => {
     expect(findAnagramsSlidingWindowWhile('asdfghasdddfghasdfgh', 'ddf')).toStrictEqual([9]);
     expect(findAnagramsSlidingWindowFor('asdfghasdddfghasdfgh', 'ddf')).toStrictEqual([9]);
   });
+
+  test('Input: s = "qwertyqweqwe", p = "we"; Output: [1,7,10]', () => {
+    expect(findAnagrams('qwertyqweqwe', 'we')).toStrictEqual([1, 7, 10]);
+    expect(findAnagramsSlidingWindowWhile('qwertyqweqwe', 'we')).toStrictEqual([1, 7, 10]);
+    expect(findAnagramsSlidingWindowFor('qwertyqweqwe', 'we')).toStrictEqual([1, 7, 10]);
+  });
 });

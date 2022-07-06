@@ -1,12 +1,12 @@
-export class BinaryTreeNode {
-  constructor(
-    public val: number = 0,
-    public left: BinaryTreeNode | null = null,
-    public right: BinaryTreeNode | null = null
-  ) {
+export class BinaryTreeNode<T = number> {
+  val?: T;
+  left: BinaryTreeNode | null;
+  right: BinaryTreeNode | null;
+
+  constructor(val?: T) {
     this.val = val;
-    this.left = left;
-    this.right = right;
+    this.left = null;
+    this.right = null;
   }
 
   get isLeaf() {

@@ -6,9 +6,8 @@ export const lowestCommonAncestor = (
   q: BinaryTreeNode
 ): BinaryTreeNode | null => {
   while (root) {
-    console.log(root.val < p.val, root.val < q.val);
-    if (root.val < p.val && root.val < q.val) root = root.right;
-    else if (root.val > p.val && root.val > q.val) root = root.left;
+    if (Number(root.val) < Number(p.val) && Number(root.val) < Number(q.val)) root = root.right;
+    else if (Number(root.val) > Number(p.val) && Number(root.val) > Number(q.val)) root = root.left;
     else break;
   }
 

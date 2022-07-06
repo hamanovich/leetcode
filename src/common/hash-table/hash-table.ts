@@ -48,12 +48,7 @@ export class HashTable<T> {
   }
 
   clear() {
-    for (const prop in this.table) {
-      if (Object.prototype.hasOwnProperty.call(this.table, prop)) {
-        delete this.table[prop];
-      }
-    }
-
+    Object.getOwnPropertyNames(this.table).forEach(property => delete this.table[Number(property)]);
     this.size = 0;
   }
 

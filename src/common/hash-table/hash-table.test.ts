@@ -27,12 +27,15 @@ describe('HashTable', () => {
     ht.set('a', 'prop-a');
     ht.set('b', 'prop-b');
     ht.set('c', 'prop-c');
+    ht.set('Spain', 110);
+    ht.set('ǻ', 192);
     expect(ht.get('a')).toBe('prop-a');
 
     ht.remove('a');
     expect(ht.get('a')).toBeUndefined();
 
     ht.remove('x');
+    ht.remove('ǻ');
     expect(ht.get('x')).toBeUndefined();
   });
 });

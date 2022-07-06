@@ -15,12 +15,12 @@ export const findAnagrams = (s: string, p: string): number[] => {
   let left = 0;
 
   for (let right = 0; right < s.length; right++) {
-    if (chars[s[right]] !== null) chars[s[right]]--;
+    if (!isNaN(chars[s[right]])) chars[s[right]]--;
     if (chars[s[right]] === 0) unique--;
     if (unique === 0) output.push(left);
 
     if (right - left + 1 === p.length) {
-      if (chars[s[left]] !== null) chars[s[left]]++;
+      if (!isNaN(chars[s[left]])) chars[s[left]]++;
       if (chars[s[left++]] === 1) unique++;
     }
   }

@@ -42,7 +42,18 @@ describe('lowestCommonAncestor', () => {
   test('root = [2,1], p = 2, q = 1', () => {
     const tree = new BinaryTreeNode(2);
     tree.left = new BinaryTreeNode(1);
+
     expect(lowestCommonAncestor(tree, new BinaryTreeNode(2), new BinaryTreeNode(1))).toStrictEqual(tree);
     expect(lowestCommonAncestorRecursive(tree, new BinaryTreeNode(2), new BinaryTreeNode(1))).toStrictEqual(tree);
+  });
+
+  test('root = [2,2,1], p = 2, q = 1', () => {
+    const tree = new BinaryTreeNode(1);
+    tree.left = new BinaryTreeNode(1);
+    tree.left.right = new BinaryTreeNode(10);
+    tree.left.left = new BinaryTreeNode(3);
+
+    expect(lowestCommonAncestor(tree, new BinaryTreeNode(2), new BinaryTreeNode(3))).toBeNull();
+    expect(lowestCommonAncestorRecursive(tree, new BinaryTreeNode(2), new BinaryTreeNode(3))).toBeNull();
   });
 });

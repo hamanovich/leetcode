@@ -14,30 +14,29 @@ export class BinarySearchTree {
     else this.insertNode(this.root, node);
   }
 
-  insertNode(node: BinaryTreeNode | null, newNode: BinaryTreeNode | null) {
-    if (!newNode && !node) return;
-    if (!!newNode?.val < !!node?.val) {
-      if (!node?.left) node && (node.left = newNode);
+  insertNode(node: BinaryTreeNode, newNode: BinaryTreeNode) {
+    if (Number(newNode.val) < Number(node.val)) {
+      if (node.left === null) node.left = newNode;
       else this.insertNode(node.left, newNode);
     } else {
-      if (!node?.right) node && (node.right = newNode);
+      if (node.right === null) node.right = newNode;
       else this.insertNode(node.right, newNode);
     }
   }
 
-  remove(data: number) {
-    this.root = this.removeNode(this.root, data);
+  remove(val: number) {
+    this.root = this.removeNode(this.root, val);
   }
 
   removeNode(node: BinaryTreeNode | null, key: number) {
     if (!node) return null;
 
-    if (key < node.val) {
+    if (key < Number(node.val)) {
       node.left = this.removeNode(node.left, key);
       return node;
     }
 
-    if (key > node.val) {
+    if (key > Number(node.val)) {
       node.right = this.removeNode(node.right, key);
       return node;
     }
@@ -58,7 +57,7 @@ export class BinarySearchTree {
     }
 
     node.val = this.findMinNode(node.right).val;
-    node.right = this.removeNode(node.right, this.findMinNode(node.right).val);
+    node.right = this.removeNode(node.right, Number(this.findMinNode(node.right).val));
 
     return node;
   }
@@ -72,10 +71,10 @@ export class BinarySearchTree {
     return this.root;
   }
 
-  search(node: BinaryTreeNode | null, data: number): BinaryTreeNode | null {
+  search(node: BinaryTreeNode | null, val: number): BinaryTreeNode | null {
     if (!node) return null;
-    if (data < node.val) return this.search(node.left, data);
-    if (data > node.val) return this.search(node.right, data);
+    if (val < Number(node.val)) return this.search(node.left, val);
+    if (val > Number(node.val)) return this.search(node.right, val);
     return node;
   }
 }

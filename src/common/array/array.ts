@@ -41,12 +41,7 @@ export class Array<T> {
   }
 
   clear() {
-    for (const prop in this.data) {
-      if (Object.prototype.hasOwnProperty.call(this.data, prop)) {
-        delete this.data[prop];
-      }
-    }
-
+    Object.getOwnPropertyNames(this.data).forEach(property => delete this.data[Number(property)]);
     this.length = 0;
   }
 
