@@ -8,4 +8,8 @@ describe('longestCommonPrefix', () => {
   test('Input: strs = ["dog","racecar","car"]; Output: ""', () => {
     expect(longestCommonPrefix(['dog', 'racecar', 'car'])).toBe('');
   });
+
+  test('Input: strs = []; Output: ""', () => {
+    expect(longestCommonPrefix([''])).toBe('');
+  });
 });

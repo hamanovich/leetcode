@@ -31,6 +31,7 @@
     "test": "jest -o --passWithNoTests",
     "test:all": "jest --all --passWithNoTests",
     "test:watch": "jest --watchAll",
+    "test:ci": "jest --bail --coverage",
     "lint": "eslint --cache --cache-location=.cache/eslint",
     "lint:nocache": "eslint .",
     "ts": "ts-node"
@@ -57,7 +58,7 @@
     "*.{ts, js}": [
       "yarn prettier",
       "yarn lint",
-      "yarn test"
+      "yarn test:ci"
     ]
   },
   "engines": {
