@@ -8,4 +8,8 @@ describe('bubbleSort', () => {
   test('arr = [3, 2, 1]; Output = [1, 2, 3]', () => {
     expect(bubbleSort([3, 2, 1])).toStrictEqual([1, 2, 3]);
   });
+
+  test('arr = [1, 1]; Output = [1, 1]', () => {
+    expect(bubbleSort([1, 1])).toStrictEqual([1, 1]);
+  });
 });
