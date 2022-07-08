@@ -5,7 +5,7 @@ export const getDecimalValue = (head: LinkedListNode | null): number => {
 
   const output = [head.value];
 
-  while (head?.next) {
+  while (head.next) {
     head = head.next;
     output.push(head.value);
   }

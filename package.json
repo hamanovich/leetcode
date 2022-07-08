@@ -27,7 +27,7 @@
   "scripts": {
     "build": "tsc",
     "prettier": "prettier --write ./src",
-    "coverage": "jest --coverage --watchAll=false",
+    "coverage": "jest --coverage --passWithNoTests",
     "coverage:single": "jest --coverage --collectCoverageFrom=src/common/linked-list/linked-list.ts",
     "test": "jest -o --passWithNoTests",
     "test:all": "jest --all --passWithNoTests",
@@ -56,7 +56,6 @@
   },
   "lint-staged": {
     "*.ts": [
-      "yarn test:all",
       "yarn prettier",
       "yarn lint",
       "yarn coverage"

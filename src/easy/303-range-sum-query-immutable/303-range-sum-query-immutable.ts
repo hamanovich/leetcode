@@ -1,7 +1,5 @@
 export class NumArray {
-  constructor(public nums: number[]) {
-    this.nums = nums;
-  }
+  constructor(public nums: number[]) {}
 
   sumRange(left: number, right: number): number {
     let result = 0;

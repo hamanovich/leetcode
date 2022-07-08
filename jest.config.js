@@ -5,7 +5,7 @@ export default {
   coverageDirectory: './coverage/',
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/'],
   coveragePathIgnorePatterns: ['<rootDir>/node_modules/'],
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(j|t)s$',
+  testRegex: '(/__tests__/.*|(\\.|/)test)\\.ts$',
   coverageReporters: ['json', 'text', 'html', 'lcov'],
   coverageThreshold: {
     global: {

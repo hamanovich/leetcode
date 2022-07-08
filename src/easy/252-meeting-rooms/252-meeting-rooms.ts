@@ -1,8 +1,5 @@
 export class Interval {
-  constructor(public start: number, public end: number) {
-    this.start = start;
-    this.end = end;
-  }
+  constructor(public start: number, public end: number) {}
 }
 
 export const canAttendMeetings = (intervals: Interval[]): boolean => {
