@@ -11,8 +11,8 @@ describe('removeElements', () => {
   });
 
   test('head = [1,2,6,3,4,5,6], val = 6', () => {
-    [1, 2, 6, 3, 4, 5, 6].forEach(item => list.append(item));
-    [1, 2, 3, 4, 5].forEach(item => listResult.append(item));
+    list.fromArray([1, 2, 6, 3, 4, 5, 6]);
+    listResult.fromArray([1, 2, 3, 4, 5]);
     expect(removeElements(list.head, 6)).toStrictEqual(listResult.head);
   });
 
@@ -21,7 +21,7 @@ describe('removeElements', () => {
   });
 
   test('head = [7,7,7,7], val = 7', () => {
-    [7, 7, 7, 7].forEach(item => list.append(item));
+    list.fromArray([7, 7, 7, 7]);
     expect(removeElements(list.head, 7)).toStrictEqual(listResult.head);
   });
 });

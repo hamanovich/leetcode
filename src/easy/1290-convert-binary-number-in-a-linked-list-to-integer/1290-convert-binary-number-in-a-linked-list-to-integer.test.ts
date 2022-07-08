@@ -8,22 +8,22 @@ describe('getDecimalValue', () => {
   beforeEach(() => list.clear());
 
   test('#1: Input: head = [1,0,1] Output: 5', () => {
-    [1, 0, 1].forEach(item => list.append(item));
+    list.fromArray([1, 0, 1]);
     expect(getDecimalValue(list.head)).toBe(5);
   });
 
   test('#2: Input: head = [1,0,1] Output: 5', () => {
-    [1, 0, 1].forEach(item => list.append(item));
+    list.fromArray([1, 0, 1]);
     expect(getDecimalValueBit(list.head)).toBe(5);
   });
 
   test('#1: Input: head = [1,0,1,1,1,0] Output: 46', () => {
-    [1, 0, 1, 1, 1, 0].forEach(item => list.append(item));
+    list.fromArray([1, 0, 1, 1, 1, 0]);
     expect(getDecimalValue(list.head)).toBe(46);
   });
 
   test('#2: Input: head = [1,0,1,1,1,0] Output: 46', () => {
-    [1, 0, 1, 1, 1, 0].forEach(item => list.append(item));
+    list.fromArray([1, 0, 1, 1, 1, 0]);
     expect(getDecimalValueBit(list.head)).toBe(46);
   });
 

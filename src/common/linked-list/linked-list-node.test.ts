@@ -28,9 +28,7 @@ describe('LinkedListNode', () => {
   });
 
   it('converts node to string', () => {
-    const node = new LinkedListNode(1);
-
-    expect(node.toString()).toBe('1');
+    expect(new LinkedListNode(1).toString()).toBe('1');
   });
 
   it('converts node to string with custom stringifier', () => {

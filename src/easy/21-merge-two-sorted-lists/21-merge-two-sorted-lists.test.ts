@@ -3,9 +3,9 @@ import { mergeTwoLists } from './21-merge-two-sorted-lists';
 import { mergeTwoLists as mergeTwoLists2 } from './21-merge-two-sorted-lists';
 
 describe('mergeTwoLists', () => {
-  const list = new LinkedList();
-  const list2 = new LinkedList();
-  const listResult = new LinkedList();
+  const list = new LinkedList<number>();
+  const list2 = new LinkedList<number>();
+  const listResult = new LinkedList<number>();
 
   beforeEach(() => {
     list.clear();
@@ -14,16 +14,16 @@ describe('mergeTwoLists', () => {
   });
 
   test('#1: list1 = [1,2,4], list2 = [1,3,4]', () => {
-    [1, 2, 4].forEach(item => list.append(item));
-    [1, 3, 4].forEach(item => list2.append(item));
-    [1, 1, 2, 3, 4, 4].forEach(item => listResult.append(item));
+    list.fromArray([1, 2, 4]);
+    list2.fromArray([1, 3, 4]);
+    listResult.fromArray([1, 1, 2, 3, 4, 4]);
     expect(mergeTwoLists(list.head, list2.head)).toStrictEqual(listResult.head);
   });
 
   test('#2: list1 = [1,2,4], list2 = [1,3,4]', () => {
-    [1, 2, 4].forEach(item => list.append(item));
-    [1, 3, 4].forEach(item => list2.append(item));
-    [1, 1, 2, 3, 4, 4].forEach(item => listResult.append(item));
+    list.fromArray([1, 2, 4]);
+    list2.fromArray([1, 3, 4]);
+    listResult.fromArray([1, 1, 2, 3, 4, 4]);
     expect(mergeTwoLists2(list.head, list2.head)).toStrictEqual(listResult.head);
   });
 

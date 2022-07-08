@@ -6,8 +6,8 @@ describe('deleteNode', () => {
     const list = new LinkedList();
     const listResult = new LinkedList();
 
-    [4, 5, 1, 9].forEach(item => list.append(item));
-    [5, 1, 9].forEach(item => listResult.append(item));
+    list.fromArray([4, 5, 1, 9]);
+    listResult.fromArray([5, 1, 9]);
 
     deleteNode(list.head);
 

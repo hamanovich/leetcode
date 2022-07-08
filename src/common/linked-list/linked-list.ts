@@ -11,9 +11,14 @@ export class LinkedList<T = unknown> {
 
   prepend(value: T) {
     const node = new LinkedListNode<T>(value, this.head);
-    this.head = node;
 
-    !this.tail && (this.tail = node);
+    if (!this.head || !this.tail) {
+      this.head = node;
+      this.tail = node;
+    } else {
+      node.next = this.head;
+      this.head = node;
+    }
 
     return this;
   }
@@ -24,12 +29,10 @@ export class LinkedList<T = unknown> {
     if (!this.head || !this.tail) {
       this.head = node;
       this.tail = node;
-
-      return this;
+    } else {
+      this.tail.next = node;
+      this.tail = node;
     }
-
-    this.tail.next = node;
-    this.tail = node;
 
     return this;
   }

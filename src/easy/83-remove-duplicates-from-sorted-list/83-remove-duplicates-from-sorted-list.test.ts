@@ -11,14 +11,16 @@ describe('deleteDuplicates', () => {
   });
 
   test('head = [1,1,2]', () => {
-    [1, 1, 2].forEach(item => list.append(item));
-    [1, 2].forEach(item => listResult.append(item));
+    list.fromArray([1, 1, 2]);
+    listResult.fromArray([1, 2]);
+
     expect(deleteDuplicates(list.head)).toStrictEqual(listResult.head);
   });
 
   test('head = [1,1,2,2,3]', () => {
-    [1, 1, 2, 2, 3].forEach(item => list.append(item));
-    [1, 2, 3].forEach(item => listResult.append(item));
+    list.fromArray([1, 1, 2, 2, 3]);
+    listResult.fromArray([1, 2, 3]);
+
     expect(deleteDuplicates(list.head)).toStrictEqual(listResult.head);
   });
 });

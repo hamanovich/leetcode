@@ -27,11 +27,11 @@
   "scripts": {
     "build": "tsc",
     "prettier": "prettier --write ./src",
-    "coverage": "jest --coverage",
+    "coverage": "jest --coverage --watchAll=false",
+    "coverage:single": "jest --coverage --collectCoverageFrom=src/common/linked-list/linked-list.ts",
     "test": "jest -o --passWithNoTests",
     "test:all": "jest --all --passWithNoTests",
     "test:watch": "jest --watchAll",
-    "test:ci": "jest --bail --coverage",
     "lint": "eslint --cache --cache-location=.cache/eslint",
     "lint:nocache": "eslint .",
     "ts": "ts-node"
@@ -55,10 +55,11 @@
     "typescript": "^4.7.4"
   },
   "lint-staged": {
-    "*.{ts, js}": [
+    "*.ts": [
+      "yarn test:all",
       "yarn prettier",
       "yarn lint",
-      "yarn test:ci"
+      "yarn coverage"
     ]
   },
   "engines": {

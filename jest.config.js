@@ -6,6 +6,7 @@ export default {
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/'],
   coveragePathIgnorePatterns: ['<rootDir>/node_modules/'],
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(j|t)s$',
+  coverageReporters: ['json', 'text', 'html', 'lcov'],
   coverageThreshold: {
     global: {
       statements: 100,

@@ -7,10 +7,7 @@ export const longestPalindrome = (s: string): number => {
       count += 2;
       set.delete(char);
     } else set.add(char);
-    // set.delete(char);
   }
-
-  console.log('set.size:', set.size);
 
   return count + set.size;
 };
