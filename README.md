@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/hamanovich/leetcode/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/hamanovich/leetcode/actions/workflows/CI.yml)
 [![codecov](https://codecov.io/gh/hamanovich/leetcode/branch/main/graph/badge.svg?token=WI7WGV8S0B)](https://codecov.io/gh/hamanovich/leetcode)
+[![DeepScan grade](https://deepscan.io/api/teams/18251/projects/21553/branches/624048/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=18251&pid=21553&bid=624048)
 
 ## Leetcode practical examples
 
