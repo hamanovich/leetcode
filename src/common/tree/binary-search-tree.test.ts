@@ -89,4 +89,48 @@ describe('BinarySearchTree', () => {
     expect(tree.search(node, 42)).toBeNull();
     expect(tree.search(tree.root, 7)).toStrictEqual(node7);
   });
+
+  it('BFS()', () => {
+    const arr = [47, 21, 76, 18, 27, 52, 82];
+    const tree = new BinarySearchTree();
+    arr.forEach(item => tree.insert(item));
+
+    expect(tree.BFS()).toStrictEqual(arr);
+  });
+
+  it('DFSPreOrder()', () => {
+    const arr = [47, 21, 76, 18, 27, 52, 82];
+    const result = [47, 21, 18, 27, 76, 52, 82];
+    const tree = new BinarySearchTree();
+
+    expect(tree.DFSPreOrder()).toStrictEqual([]);
+
+    arr.forEach(item => tree.insert(item));
+
+    expect(tree.DFSPreOrder()).toStrictEqual(result);
+  });
+
+  it('DFSPostOrder()', () => {
+    const arr = [47, 21, 76, 18, 27, 52, 82];
+    const result = [18, 27, 21, 52, 82, 76, 47];
+    const tree = new BinarySearchTree();
+
+    expect(tree.DFSPostOrder()).toStrictEqual([]);
+
+    arr.forEach(item => tree.insert(item));
+
+    expect(tree.DFSPostOrder()).toStrictEqual(result);
+  });
+
+  it('DFSInOrder()', () => {
+    const arr = [47, 21, 76, 18, 27, 52, 82];
+    const result = [18, 21, 27, 47, 52, 76, 82];
+    const tree = new BinarySearchTree();
+
+    expect(tree.DFSInOrder()).toStrictEqual([]);
+
+    arr.forEach(item => tree.insert(item));
+
+    expect(tree.DFSInOrder()).toStrictEqual(result);
+  });
 });

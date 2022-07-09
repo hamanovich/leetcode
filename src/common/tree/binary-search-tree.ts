@@ -77,6 +77,66 @@ export class BinarySearchTree {
     if (val > Number(node.val)) return this.search(node.right, val);
     return node;
   }
+
+  BFS(): number[] {
+    let node = this.root;
+    const results: number[] = [];
+    const queue = [node];
+
+    while (queue.length) {
+      node = queue.shift() as BinaryTreeNode;
+      results.push(Number(node.val));
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+    }
+
+    return results;
+  }
+
+  DFSPreOrder(): number[] {
+    const results: number[] = [];
+
+    const traverse = (node: BinaryTreeNode | null) => {
+      if (!node) return;
+      results.push(Number(node.val));
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    };
+
+    traverse(this.root);
+
+    return results;
+  }
+
+  DFSPostOrder(): number[] {
+    const results: number[] = [];
+
+    const traverse = (node: BinaryTreeNode | null) => {
+      if (!node) return;
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      results.push(Number(node.val));
+    };
+
+    traverse(this.root);
+
+    return results;
+  }
+
+  DFSInOrder(): number[] {
+    const results: number[] = [];
+
+    const traverse = (node: BinaryTreeNode | null) => {
+      if (!node) return;
+      if (node.left) traverse(node.left);
+      results.push(Number(node.val));
+      if (node.right) traverse(node.right);
+    };
+
+    traverse(this.root);
+
+    return results;
+  }
 }
 
 // const tree = new BinarySearchTree();
