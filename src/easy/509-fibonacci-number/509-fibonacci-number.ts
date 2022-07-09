@@ -1,4 +1,1 @@
-export const fib = (n: number): number => {
-  if (n < 2) return n;
-  return fib(n - 1) + fib(n - 2);
-};
+export const fib = (n: number): number => (n < 2 ? n : fib(n - 1) + fib(n - 2));
