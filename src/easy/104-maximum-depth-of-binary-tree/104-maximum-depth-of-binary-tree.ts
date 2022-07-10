@@ -1,4 +1,5 @@
 // DFS - Depth First Search
+
 import { BinaryTreeNode } from './../../common/tree/binary-tree-node';
 
 export const maxDepth = (root?: BinaryTreeNode): number => {
