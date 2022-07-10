@@ -9,11 +9,11 @@ export class BinaryTreeNode<T = number> {
     this.right = null;
   }
 
-  get isLeaf() {
+  get isLeaf(): boolean {
     return this.left === null && this.right === null;
   }
 
-  get hasChildren() {
+  get hasChildren(): boolean {
     return !this.isLeaf;
   }
 }

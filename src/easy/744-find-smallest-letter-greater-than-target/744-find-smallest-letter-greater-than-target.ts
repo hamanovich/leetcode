@@ -1,4 +1,4 @@
-export const nextGreatestLetter = (letters: string[], target: string) => {
+export const nextGreatestLetter = (letters: string[], target: string): string => {
   if (letters.length === 1) return letters[0];
 
   let left = 0;

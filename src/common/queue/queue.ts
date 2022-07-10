@@ -1,33 +1,33 @@
 export class Queue<T> {
   #items: T[] = [];
 
-  enqueue(item: T) {
+  enqueue(item: T): void {
     this.#items.splice(0, 0, item);
   }
 
-  dequeue() {
+  dequeue(): void {
     this.#items.length && this.#items.pop();
   }
 
-  isEmpty() {
+  isEmpty(): boolean {
     return this.#items.length === 0;
   }
 
-  empty() {
+  empty(): void {
     this.#items.length = 0;
   }
 
-  size() {
+  size(): number {
     return this.#items.length;
   }
 
-  peek() {
+  peek(): T | null {
     if (this.isEmpty()) return null;
 
     return this.#items[0];
   }
 
-  toString() {
+  toString(): string {
     return this.#items.join('');
   }
 }

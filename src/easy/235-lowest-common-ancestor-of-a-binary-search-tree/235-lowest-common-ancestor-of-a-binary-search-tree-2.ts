@@ -5,8 +5,10 @@ export const lowestCommonAncestor = (
   p: BinaryTreeNode,
   q: BinaryTreeNode
 ): BinaryTreeNode | null => {
-  if (root && root.val < p.val && root.val < q.val) return lowestCommonAncestor(root.right, p, q);
-  if (root && root.val > p.val && root.val > q.val) return lowestCommonAncestor(root.left, p, q);
+  if (root && Number(root.val) < Number(p.val) && Number(root.val) < Number(q.val))
+    return lowestCommonAncestor(root.right, p, q);
+  if (root && Number(root.val) > Number(p.val) && Number(root.val) > Number(q.val))
+    return lowestCommonAncestor(root.left, p, q);
 
   return root;
 };

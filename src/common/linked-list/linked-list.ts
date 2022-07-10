@@ -9,7 +9,7 @@ export class LinkedList<T = unknown> {
     this.tail = null;
   }
 
-  prepend(value: T) {
+  prepend(value: T): LinkedList<T> {
     const node = new LinkedListNode<T>(value, this.head);
 
     if (!this.head || !this.tail) {
@@ -23,7 +23,7 @@ export class LinkedList<T = unknown> {
     return this;
   }
 
-  append(value: T) {
+  append(value: T): LinkedList<T> {
     const node = new LinkedListNode(value);
 
     if (!this.head || !this.tail) {
@@ -37,7 +37,7 @@ export class LinkedList<T = unknown> {
     return this;
   }
 
-  find(value: T) {
+  find(value: T): LinkedListNode | null {
     let currentNode = this.head as LinkedListNode;
 
     while (currentNode) {
@@ -49,13 +49,13 @@ export class LinkedList<T = unknown> {
     return null;
   }
 
-  fromArray(values: T[]) {
+  fromArray(values: T[]): LinkedList<T> {
     values.forEach(value => this.append(value));
 
     return this;
   }
 
-  delete(value: T) {
+  delete(value: T): LinkedListNode | null {
     if (!this.head) return null;
 
     let deletedNode = null;
@@ -84,7 +84,7 @@ export class LinkedList<T = unknown> {
     return deletedNode;
   }
 
-  deleteTail() {
+  deleteTail(): LinkedListNode | null {
     if (!this.tail) return null;
 
     const deletedTail = this.tail;
@@ -110,7 +110,7 @@ export class LinkedList<T = unknown> {
     return deletedTail;
   }
 
-  deleteHead() {
+  deleteHead(): LinkedListNode | null {
     if (!this.head) return null;
 
     const deletedHead = this.head as LinkedListNode;
@@ -129,7 +129,7 @@ export class LinkedList<T = unknown> {
     this.tail = null;
   }
 
-  toArray() {
+  toArray(): LinkedListNode[] | null {
     const nodes: LinkedListNode[] = [];
 
     if (!this.head) return null;
@@ -144,7 +144,7 @@ export class LinkedList<T = unknown> {
     return nodes;
   }
 
-  toString(callback?: (arg: T) => string) {
+  toString(callback?: (arg: T) => string): string | undefined {
     if (!this.toArray()) return '';
     return this.toArray()
       ?.map(node => node.toString(callback as ((arg: unknown) => string) | undefined))

@@ -1,6 +1,6 @@
 import { LinkedListNode } from './../../common/linked-list/linked-list-node';
 
-const getLength = (head: LinkedListNode) => {
+const getLength = (head: LinkedListNode): number => {
   let length = 1;
   while (head) {
     length++;
@@ -9,7 +9,7 @@ const getLength = (head: LinkedListNode) => {
   return length;
 };
 
-export const removeNthFromEnd = (head: LinkedListNode, n: number) => {
+export const removeNthFromEnd = (head: LinkedListNode, n: number): LinkedListNode | null => {
   let on = head;
   const length = getLength(head);
 

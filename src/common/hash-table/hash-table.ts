@@ -7,7 +7,7 @@ export class HashTable<T> {
     this.size = 0;
   }
 
-  #hash(key: string) {
+  #hash(key: string): number {
     let hash = 0;
 
     for (let i = 0; i < key.length; i++) hash += key.charCodeAt(i);
@@ -15,7 +15,7 @@ export class HashTable<T> {
     return hash % this.table.length;
   }
 
-  set(key: string, value: T) {
+  set(key: string, value: T): void {
     const index = this.#hash(key);
 
     if (this.table[index]) {
@@ -34,7 +34,7 @@ export class HashTable<T> {
     this.size++;
   }
 
-  get(key: string) {
+  get(key: string): T | undefined {
     const index = this.#hash(key);
 
     if (this.table[index]) {
@@ -44,15 +44,16 @@ export class HashTable<T> {
         }
       }
     }
+
     return undefined;
   }
 
-  clear() {
+  clear(): void {
     Object.getOwnPropertyNames(this.table).forEach(property => delete this.table[Number(property)]);
     this.size = 0;
   }
 
-  remove(key: string) {
+  remove(key: string): boolean {
     const index = this.#hash(key);
 
     if (this.table[index] && this.table[index].length) {
@@ -63,6 +64,8 @@ export class HashTable<T> {
           return true;
         }
       }
-    } else return false;
+    }
+
+    return false;
   }
 }

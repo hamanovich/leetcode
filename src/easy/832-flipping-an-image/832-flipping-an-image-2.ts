@@ -1,7 +1,9 @@
 // https://leetcode.com/problems/flipping-an-image/
 
 export const flipAndInvertImage = (image: number[][]): number[][] => {
-  for (const row in image) image[row] = image[row].reverse().map(x => 1 - x);
+  const output: number[][] = [];
 
-  return image;
+  for (const row of image) output.push(row.reverse().map(x => 1 - x));
+
+  return output;
 };

@@ -3,7 +3,7 @@ export class LinkedListNode<T = unknown> {
     this.value = value;
   }
 
-  toString(callback?: (arg: T) => string) {
+  toString(callback?: (arg: T) => string): string {
     return callback ? callback(this.value) : `${this.value}`;
   }
 }

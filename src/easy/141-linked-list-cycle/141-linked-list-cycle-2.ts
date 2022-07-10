@@ -1,6 +1,6 @@
 import { LinkedListNode } from '../../common/linked-list/linked-list-node';
 
-export const hasCycle = (head: LinkedListNode) => {
+export const hasCycle = (head: LinkedListNode): boolean => {
   let slow = head;
   let fast = head;
 

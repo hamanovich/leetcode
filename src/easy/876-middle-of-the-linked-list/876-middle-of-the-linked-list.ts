@@ -1,6 +1,6 @@
 import { LinkedListNode } from '../../common/linked-list/linked-list-node';
 
-export const middleNode = (head: LinkedListNode | null) => {
+export const middleNode = (head: LinkedListNode | null): LinkedListNode | null => {
   let slow = head;
   let fast = head;
 

@@ -1,4 +1,4 @@
-export const isIsomorphic = (s: string, t: string) => {
+export const isIsomorphic = (s: string, t: string): boolean => {
   const hash1: Record<string, string> = {};
   const hash2: Record<string, string> = {};
 

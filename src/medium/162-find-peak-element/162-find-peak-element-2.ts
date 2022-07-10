@@ -1,4 +1,4 @@
-export const findPeakElement = (nums: number[]) => {
+export const findPeakElement = (nums: number[]): number => {
   for (let i = 0; i < nums.length - 1; i++) {
     if (nums[i] > nums[i + 1]) return i;
   }

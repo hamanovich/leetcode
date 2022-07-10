@@ -1,6 +1,6 @@
 import { LinkedListNode } from '../../common/linked-list/linked-list-node';
 
-export const getDecimalValue = (head: LinkedListNode | null): number => {
+export const getDecimalValue = (head: LinkedListNode<number> | null): number => {
   if (!head) return 0;
 
   let value = 0;

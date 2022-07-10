@@ -1,6 +1,6 @@
 import { LinkedListNode } from '../../common/linked-list/linked-list-node';
 
-export const deleteDuplicates = (head: LinkedListNode | null) => {
+export const deleteDuplicates = (head: LinkedListNode | null): LinkedListNode | null => {
   let current = head;
 
   while (current?.next) {

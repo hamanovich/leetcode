@@ -1,4 +1,4 @@
-export const permute = (nums: number[]) => {
+export const permute = (nums: number[]): number[][] => {
   const result: number[][] = [];
   const dfs = (current: number[], rest: number[]) => {
     if (!rest.length) return result.push(current);

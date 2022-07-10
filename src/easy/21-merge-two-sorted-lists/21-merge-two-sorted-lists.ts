@@ -1,6 +1,9 @@
 import { LinkedListNode } from '../../common/linked-list/linked-list-node';
 
-export const mergeTwoLists = (list1: LinkedListNode<number> | null, list2: LinkedListNode<number> | null) => {
+export const mergeTwoLists = (
+  list1: LinkedListNode<number> | null,
+  list2: LinkedListNode<number> | null
+): LinkedListNode | null => {
   const tempNode = new LinkedListNode(0);
   let currentNode = tempNode;
 

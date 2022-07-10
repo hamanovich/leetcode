@@ -1,6 +1,6 @@
 import { LinkedListNode } from '../../common/linked-list/linked-list-node';
 
-export const deleteNode = (node: LinkedListNode | null) => {
+export const deleteNode = (node: LinkedListNode | null): void | null => {
   if (!node?.next) return null;
 
   node.value = node.next.value;

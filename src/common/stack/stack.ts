@@ -1,31 +1,31 @@
 export class Stack<T> {
   #items: T[] = [];
 
-  push(element: T) {
+  push(element: T): void {
     this.#items.push(element);
   }
 
-  pop() {
+  pop(): void {
     this.#items.length && this.#items.pop();
   }
 
-  isEmpty() {
+  isEmpty(): boolean {
     return this.#items.length === 0;
   }
 
-  empty() {
+  empty(): void {
     this.#items.length = 0;
   }
 
-  size() {
+  size(): number {
     return this.#items.length;
   }
 
-  peek() {
+  peek(): T {
     return this.#items[this.#items.length - 1];
   }
 
-  toString() {
+  toString(): string {
     return this.#items.join('');
   }
 }

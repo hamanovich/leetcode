@@ -1,6 +1,6 @@
 import { LinkedListNode } from '../../common/linked-list/linked-list-node';
 
-export const getIntersectionNode = (headA: LinkedListNode | null, headB: LinkedListNode | null) => {
+export const getIntersectionNode = (headA: LinkedListNode | null, headB: LinkedListNode | null): unknown => {
   if (!headA || !headB) return null;
 
   let a: LinkedListNode | null = headA;

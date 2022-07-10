@@ -1,4 +1,4 @@
-export const climbStairs = (n: number) => {
+export const climbStairs = (n: number): number => {
   if (n === 1) return 1;
 
   let n1 = 1;

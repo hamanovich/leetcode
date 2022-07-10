@@ -1,4 +1,4 @@
-export const permute = (nums: number[], n = 0) => {
+export const permute = (nums: number[], n = 0): number[][] => {
   if (n >= nums.length) return [[]];
 
   const result: number[][] = [];

@@ -1,4 +1,4 @@
-export const isValid = (s: string) => {
+export const isValid = (s: string): boolean => {
   const stack: string[] = [];
   const pairs: Record<string, string> = {
     '{': '}',

@@ -1,4 +1,4 @@
-export const isIsomorphic = (s: string, t: string) => {
+export const isIsomorphic = (s: string, t: string): boolean => {
   const map1 = new Map();
   const map2 = new Map();
 

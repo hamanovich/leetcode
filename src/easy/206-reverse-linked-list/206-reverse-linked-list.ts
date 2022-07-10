@@ -1,6 +1,6 @@
 import { LinkedListNode } from '../../common/linked-list/linked-list-node';
 
-export const reverseList = (head: LinkedListNode) => {
+export const reverseList = (head: LinkedListNode): LinkedListNode | null => {
   let prev = null;
   let on = head;
 

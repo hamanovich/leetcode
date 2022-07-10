@@ -7,14 +7,14 @@ export class BinarySearchTree {
     this.root = null;
   }
 
-  insert(val: number) {
+  insert(val: number): void {
     const node = new BinaryTreeNode(val);
 
     if (!this.root) this.root = node;
     else this.insertNode(this.root, node);
   }
 
-  insertNode(node: BinaryTreeNode, newNode: BinaryTreeNode) {
+  insertNode(node: BinaryTreeNode, newNode: BinaryTreeNode): void {
     if (Number(newNode.val) < Number(node.val)) {
       if (node.left === null) node.left = newNode;
       else this.insertNode(node.left, newNode);
@@ -24,11 +24,11 @@ export class BinarySearchTree {
     }
   }
 
-  remove(val: number) {
+  remove(val: number): void {
     this.root = this.removeNode(this.root, val);
   }
 
-  removeNode(node: BinaryTreeNode | null, key: number) {
+  removeNode(node: BinaryTreeNode | null, key: number): BinaryTreeNode | null {
     if (!node) return null;
 
     if (key < Number(node.val)) {
@@ -67,7 +67,7 @@ export class BinarySearchTree {
     return this.findMinNode(node.left);
   }
 
-  getRootNode() {
+  getRootNode(): BinaryTreeNode | null {
     return this.root;
   }
 
