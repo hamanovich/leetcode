@@ -124,7 +124,7 @@ export class LinkedList<T = unknown> {
     return deletedHead;
   }
 
-  clear() {
+  clear(): void {
     this.head = null;
     this.tail = null;
   }
