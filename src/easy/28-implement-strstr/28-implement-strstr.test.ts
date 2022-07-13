@@ -16,4 +16,14 @@ describe('strStr', () => {
     expect(strStr('a', '')).toBe(0);
     expect(strStr2('a', '')).toBe(0);
   });
+
+  test('Input: haystack = "a", needle = "qwe"; Output: -1', () => {
+    expect(strStr('a', 'qwe')).toBe(-1);
+    expect(strStr2('a', 'qwe')).toBe(-1);
+  });
+
+  test('Input: haystack = "abcdefg", needle = "qwe"; Output: -1', () => {
+    expect(strStr('abcdefg', 'aqwe')).toBe(-1);
+    expect(strStr2('abcdefg', 'aqwe')).toBe(-1);
+  });
 });
