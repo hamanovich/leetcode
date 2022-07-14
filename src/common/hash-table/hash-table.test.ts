@@ -8,7 +8,11 @@ describe('HashTable', () => {
   test('set', () => {
     ht.set('objectKey', { prop1: 'a', prop2: 'b' });
 
-    const object = ht.get('objectKey');
+    const object = ht.get('objectKey') as {
+      prop1: string;
+      prop2: string;
+    };
+
     expect(object).toBeDefined();
     expect(object.prop1).toBe('a');
     expect(object.prop2).toBe('b');
