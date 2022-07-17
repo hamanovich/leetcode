@@ -18,11 +18,9 @@ export const reverseOnlyLetters = (s: string): string => {
       continue;
     }
 
-    if (isLetter(sent[l]) && isLetter(sent[r])) {
-      [sent[l], [sent[r]]] = [sent[r], sent[l]];
-      l++;
-      r--;
-    }
+    [sent[l], [sent[r]]] = [sent[r], sent[l]];
+    l++;
+    r--;
   }
 
   return sent.join('');

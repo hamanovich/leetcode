@@ -5,8 +5,8 @@ describe('reverseOnlyLetters', () => {
     expect(reverseOnlyLetters('ab-cd')).toBe('dc-ba');
   });
 
-  test('Input: s = "a-bC-dEf-ghIj"; Output: "j-Ih-gfE-dCba"', () => {
-    expect(reverseOnlyLetters('a-bC-dEf-ghIj')).toBe('j-Ih-gfE-dCba');
+  test('Input: s = "a-!!!bC-dEf-ghIj"; Output: "j-!!!Ih-gfE-dCba"', () => {
+    expect(reverseOnlyLetters('a-!!!bC-dEf-ghIj')).toBe('j-!!!Ih-gfE-dCba');
   });
 
   test('Input: s = "Test1ng-Leet=code-Q!"; Output: "Qedo1ct-eeLg=ntse-T!"', () => {
