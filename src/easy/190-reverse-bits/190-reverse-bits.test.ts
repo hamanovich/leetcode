@@ -1,0 +1,14 @@
+import { reverseBits } from './190-reverse-bits';
+import { reverseBits as reverseBits2 } from './190-reverse-bits-2';
+
+describe('reverseBits', () => {
+  test('Input: n = 00000010100101000001111010011100; Output: 964176192 (00111001011110000010100101000000)', () => {
+    expect(reverseBits(0b00000010100101000001111010011100)).toBe(964176192);
+    expect(reverseBits2(0b00000010100101000001111010011100)).toBe(964176192);
+  });
+
+  test('Input: n = 11111111111111111111111111111101; Output: 3221225471 (10111111111111111111111111111111)', () => {
+    expect(reverseBits(0b11111111111111111111111111111101)).toBe(3221225471);
+    expect(reverseBits2(0b11111111111111111111111111111101)).toBe(3221225471);
+  });
+});
