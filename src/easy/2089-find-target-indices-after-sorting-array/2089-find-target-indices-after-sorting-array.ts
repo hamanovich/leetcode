@@ -7,6 +7,7 @@ export const targetIndices = (nums: number[], target: number): number[] => {
     .sort((a, b) => a - b)
     .findIndex((n, index) => {
       if (n === target) output.push(index);
+      return 0;
     });
 
   return output;

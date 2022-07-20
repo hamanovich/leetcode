@@ -9,7 +9,7 @@ export const mergeNodes = (head: LinkedListNode<number> | null): LinkedListNode<
     node.value += node.next.value;
     node.next = node.next.next;
 
-    if (!node?.next?.next) {
+    if (!node.next?.next) {
       node.next = null;
       break;
     }

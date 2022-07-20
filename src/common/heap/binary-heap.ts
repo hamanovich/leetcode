@@ -47,7 +47,7 @@ export class BinaryHeap<T = number> {
     [this.heap[indexOne], this.heap[indexTwo]] = [this.heap[indexTwo], this.heap[indexOne]];
   }
 
-  find(item: T) {
+  find(item: T): number[] {
     const indices: number[] = [];
 
     for (let itemIndex = 0; itemIndex < this.heap.length; itemIndex += 1) {
