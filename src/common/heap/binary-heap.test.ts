@@ -6,22 +6,22 @@ describe('Heap', () => {
 
     expect(heap).toBeDefined();
     expect(heap.peek()).toBeNull();
-    expect(heap.isEmpty()).toBe(true);
+    expect(heap.isEmpty()).toBeTruthy();
   });
 
   it('add/has/peek', () => {
     const heap = new BinaryHeap();
 
     heap.add(5);
-    expect(heap.isEmpty()).toBe(false);
-    expect(heap.has(5)).toBe(true);
-    expect(heap.has(500)).toBe(false);
+    expect(heap.isEmpty()).toBeFalsy();
+    expect(heap.has(5)).toBeTruthy();
+    expect(heap.has(500)).toBeFalsy();
     expect(heap.peek()).toBe(5);
 
     heap.add(3);
     expect(heap.peek()).toBe(3);
-    expect(heap.has(3)).toBe(true);
-    expect(heap.has(300)).toBe(false);
+    expect(heap.has(3)).toBeTruthy();
+    expect(heap.has(300)).toBeFalsy();
 
     heap.add(10);
     expect(heap.peek()).toBe(3);

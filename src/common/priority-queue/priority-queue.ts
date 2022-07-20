@@ -1,10 +1,10 @@
-export class BinaryHeap<T = number> {
+export class PriorityQueue<T> {
+  priorities: Map<T, number> = new Map();
   heap: T[] = [];
-  mapHeap: Map<T, T> = new Map();
 
   constructor() {
     this.heap = [];
-    this.mapHeap = new Map();
+    this.priorities = new Map();
   }
 
   getLeftIndex(parentIndex: number): number {
@@ -57,14 +57,14 @@ export class BinaryHeap<T = number> {
     return indices;
   }
 
-  has(item: T): boolean {
-    return !!this.mapHeap.get(item);
-  }
-
   heapifyUp(customStartIndex = 0): void {
     let currentIndex = customStartIndex || this.heap.length - 1;
 
-    while (this.hasParent(currentIndex) && this.parent(currentIndex) > this.heap[currentIndex]) {
+    while (
+      this.hasParent(currentIndex) &&
+      (this.priorities.get(this.parent(currentIndex) as T) as number) >
+        (this.priorities.get(this.heap[currentIndex] as T) as number)
+    ) {
       this.swap(currentIndex, this.getParentIndex(currentIndex));
       currentIndex = this.getParentIndex(currentIndex);
     }
@@ -75,11 +75,19 @@ export class BinaryHeap<T = number> {
     let nextIndex = null;
 
     while (this.hasLeftChild(currentIndex)) {
-      if (this.hasRightChild(currentIndex) && this.rightChild(currentIndex) < this.leftChild(currentIndex))
+      if (
+        this.hasRightChild(currentIndex) &&
+        (this.priorities.get(this.rightChild(currentIndex) as T) as number) <
+          (this.priorities.get(this.leftChild(currentIndex)) as number)
+      )
         nextIndex = this.getRightIndex(currentIndex);
       else nextIndex = this.getLeftIndex(currentIndex);
 
-      if (this.heap[currentIndex] <= this.heap[nextIndex]) break;
+      if (
+        (this.priorities.get(this.heap[currentIndex] as T) as number) <=
+        (this.priorities.get(this.heap[nextIndex] as T) as number)
+      )
+        break;
 
       this.swap(currentIndex, nextIndex);
       currentIndex = nextIndex;
@@ -101,18 +109,16 @@ export class BinaryHeap<T = number> {
     return item;
   }
 
-  add(item: T): BinaryHeap<T> {
+  add(item: T, priority = 0): PriorityQueue<T> {
+    this.priorities.set(item, priority);
     this.heap.push(item);
-    this.mapHeap.set(item, item);
     this.heapifyUp();
 
     return this;
   }
 
-  remove(item: T): BinaryHeap<T> {
+  remove(item: T): PriorityQueue<T> {
     const numberOfItemsToRemove = this.find(item).length;
-
-    this.mapHeap.delete(item);
 
     for (let iteration = 0; iteration < numberOfItemsToRemove; iteration += 1) {
       const indexToRemove = this.find(item).pop() as number;
@@ -129,6 +135,14 @@ export class BinaryHeap<T = number> {
       }
     }
 
+    this.priorities.delete(item);
+
+    return this;
+  }
+
+  changePriority(item: T, priority: number): PriorityQueue<T> {
+    this.remove(item);
+    this.add(item, priority);
     return this;
   }
 

@@ -27,11 +27,11 @@ describe('Queue', () => {
   });
 
   it('isEmpty()', () => {
-    expect(queue.isEmpty()).toBe(true);
+    expect(queue.isEmpty()).toBeTruthy();
 
     queue.enqueue(1);
 
-    expect(queue.isEmpty()).toBe(false);
+    expect(queue.isEmpty()).toBeFalsy();
   });
 
   it('should dequeue from queue', () => {
@@ -41,7 +41,7 @@ describe('Queue', () => {
     expect(queue.dequeue()).toBe(1);
     expect(queue.dequeue()).toBe(2);
     expect(queue.dequeue()).toBeNull();
-    expect(queue.isEmpty()).toBe(true);
+    expect(queue.isEmpty()).toBeTruthy();
   });
 
   test('toString', () => {
