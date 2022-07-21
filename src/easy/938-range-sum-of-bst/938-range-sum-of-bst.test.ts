@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 import { rangeSumBST } from './938-range-sum-of-bst';
 
 describe('rangeSumBST', () => {

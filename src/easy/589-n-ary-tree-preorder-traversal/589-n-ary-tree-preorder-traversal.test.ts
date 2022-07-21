@@ -1,4 +1,4 @@
-import { TreeNode } from '../../common/tree/tree-node';
+import { TreeNode } from '../../common/tree/tree-node/tree-node';
 import { preorder } from './589-n-ary-tree-preorder-traversal';
 import { preorder as preorder2 } from './589-n-ary-tree-preorder-traversal-2';
 

@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/merge-nodes-in-between-zeros/
 
-import { LinkedListNode } from '../../common/linked-list/linked-list-node';
+import { LinkedListNode } from '../../common/linked-list/linked-list-node/linked-list-node';
 
 export const mergeNodes = (head: LinkedListNode<number> | null): LinkedListNode<number> | null => {
   let prev = null;

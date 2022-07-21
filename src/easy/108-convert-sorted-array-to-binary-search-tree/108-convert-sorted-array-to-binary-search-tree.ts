@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
 
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 
 export const sortedArrayToBST = (nums: number[]): BinaryTreeNode | null => {
   const helper = (left: number, right: number): BinaryTreeNode | null => {

@@ -1,4 +1,4 @@
-import { LinkedListNode } from '../../common/linked-list/linked-list-node';
+import { LinkedListNode } from '../../common/linked-list/linked-list-node/linked-list-node';
 import { reverseList } from '../206-reverse-linked-list/206-reverse-linked-list';
 import { middleNode } from '../876-middle-of-the-linked-list/876-middle-of-the-linked-list';
 

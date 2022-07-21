@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 import { findTarget } from './653-two-sum-iv-input-is-a-bst';
 
 describe('findTarget', () => {

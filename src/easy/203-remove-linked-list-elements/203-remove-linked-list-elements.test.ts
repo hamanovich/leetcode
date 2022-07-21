@@ -1,5 +1,5 @@
 import { LinkedList } from '../../common/linked-list/linked-list';
-import { LinkedListNode } from '../../common/linked-list/linked-list-node';
+import { LinkedListNode } from '../../common/linked-list/linked-list-node/linked-list-node';
 import { removeElements } from './203-remove-linked-list-elements';
 
 describe('removeElements', () => {

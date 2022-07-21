@@ -1,4 +1,4 @@
-import { LinkedList } from '../linked-list/linked-list';
+import { LinkedList } from '../../linked-list/linked-list';
 
 export class Queue {
   #list = new LinkedList<number>();

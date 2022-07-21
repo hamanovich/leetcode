@@ -1,4 +1,4 @@
-import { LinkedListNode } from '../../common/linked-list/linked-list-node';
+import { LinkedListNode } from '../../common/linked-list/linked-list-node/linked-list-node';
 
 export const mergeTwoLists = (
   list1: LinkedListNode<number> | null,

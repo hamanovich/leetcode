@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
 
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 
 export const findTarget = (root: BinaryTreeNode | null, k: number): boolean => {
   const seen: Set<number> = new Set();

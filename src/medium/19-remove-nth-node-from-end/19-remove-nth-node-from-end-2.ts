@@ -1,4 +1,4 @@
-import { LinkedListNode } from './../../common/linked-list/linked-list-node';
+import { LinkedListNode } from '../../common/linked-list/linked-list-node/linked-list-node';
 
 export const removeNthFromEnd = (head: LinkedListNode, n: number): LinkedListNode | null => {
   let fast = head;

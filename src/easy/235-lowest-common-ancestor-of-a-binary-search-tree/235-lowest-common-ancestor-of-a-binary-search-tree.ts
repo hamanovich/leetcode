@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 
 export const lowestCommonAncestor = (
   root: BinaryTreeNode | null,

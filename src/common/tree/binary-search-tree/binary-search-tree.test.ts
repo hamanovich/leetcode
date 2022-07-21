@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from './binary-tree-node';
+import { BinaryTreeNode } from '../binary-tree-node/binary-tree-node';
 import { BinarySearchTree } from './binary-search-tree';
 
 describe('BinarySearchTree', () => {

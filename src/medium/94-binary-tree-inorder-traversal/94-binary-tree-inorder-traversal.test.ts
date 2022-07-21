@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 import { inorderTraversal as inorderTraversalDFS } from './94-binary-tree-inorder-traversal';
 import { inorderTraversal as inorderTraversalInteraction } from './94-binary-tree-inorder-traversal-2';
 

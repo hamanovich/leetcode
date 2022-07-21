@@ -1,4 +1,4 @@
-import { LinkedListNode } from '../../common/linked-list/linked-list-node';
+import { LinkedListNode } from '../../common/linked-list/linked-list-node/linked-list-node';
 
 export const detectCycle = (head: LinkedListNode): LinkedListNode | null => {
   let slow = head;

@@ -155,15 +155,18 @@ describe('LinkedList', () => {
   it('find node by value', () => {
     const linkedList = new LinkedList();
 
-    expect(linkedList.find(5)).toBeNull();
+    expect(linkedList.find({ value: 5 })).toBeNull();
 
     linkedList.append(1);
-    expect(linkedList.find(1)).toBeDefined();
-    expect(linkedList.find(123)).toStrictEqual(linkedList.head?.next);
+    expect(linkedList.find({ value: 1 })).toBeDefined();
+    expect(linkedList.find({ value: 123 })).toStrictEqual(linkedList.head?.next);
   });
 
   it('create linked list from array', () => {
     const linkedList = new LinkedList();
+
+    expect(linkedList.toString()).toBe('');
+
     linkedList.fromArray([1, 1, 2, 3, 3, 3, 4, 5]);
 
     expect(linkedList.toString()).toBe('1,1,2,3,3,3,4,5');
@@ -174,6 +177,6 @@ describe('LinkedList', () => {
     linkedList.append(1);
     linkedList.append(2);
     linkedList.append(3);
-    expect(linkedList.toArray()?.join(',')).toBe('1,2,3');
+    expect(linkedList.toArray().join(',')).toBe('1,2,3');
   });
 });

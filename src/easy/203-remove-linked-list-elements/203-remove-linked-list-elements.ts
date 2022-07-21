@@ -1,4 +1,4 @@
-import { LinkedListNode } from '../../common/linked-list/linked-list-node';
+import { LinkedListNode } from '../../common/linked-list/linked-list-node/linked-list-node';
 
 export const removeElements = (head: LinkedListNode<number> | null, val: number): LinkedListNode<number> | null => {
   const result = new LinkedListNode(0);

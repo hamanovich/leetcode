@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/
 
-import { LinkedListNode } from '../../common/linked-list/linked-list-node';
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { LinkedListNode } from '../../common/linked-list/linked-list-node/linked-list-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 
 export const sortedListToBST = (head: LinkedListNode<number> | null): BinaryTreeNode<number> | null => {
   let curr = head;

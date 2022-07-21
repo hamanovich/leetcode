@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/
 
-import { LinkedListNode } from '../../common/linked-list/linked-list-node';
+import { LinkedListNode } from '../../common/linked-list/linked-list-node/linked-list-node';
 
 export const pairSum = (head: LinkedListNode<number> | null): number => {
   const arr: number[] = [];

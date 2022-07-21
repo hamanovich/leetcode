@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/binary-tree-paths/
 
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 
 export const binaryTreePaths = (root: BinaryTreeNode | null): string[] => {
   const dfs = (root: BinaryTreeNode | null, path: string): string[] => {

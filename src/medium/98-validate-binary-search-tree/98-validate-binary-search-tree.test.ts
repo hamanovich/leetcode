@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 import { isValidBST } from './98-validate-binary-search-tree';
 
 describe('isValidBST', () => {

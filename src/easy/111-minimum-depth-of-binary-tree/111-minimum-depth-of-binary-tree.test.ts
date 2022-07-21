@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 import { minDepth as minDepthDFS } from './111-minimum-depth-of-binary-tree';
 import { minDepth as minDepthBFS } from './111-minimum-depth-of-binary-tree-2';
 

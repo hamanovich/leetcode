@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/binary-tree-inorder-traversal/
 
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 
 export const inorderTraversal = (root: BinaryTreeNode | null): number[] => {
   const result: number[] = [];

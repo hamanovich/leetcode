@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from './../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 import { isSameTree } from './100-same-tree';
 
 describe('isSameTree', () => {

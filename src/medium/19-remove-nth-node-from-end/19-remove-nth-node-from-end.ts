@@ -1,4 +1,4 @@
-import { LinkedListNode } from './../../common/linked-list/linked-list-node';
+import { LinkedListNode } from '../../common/linked-list/linked-list-node/linked-list-node';
 
 const getLength = (head: LinkedListNode): number => {
   let length = 1;

@@ -1,4 +1,4 @@
-import { TreeNode } from '../../common/tree/tree-node';
+import { TreeNode } from '../../common/tree/tree-node/tree-node';
 
 export const preorder = (root?: TreeNode | null): number[] => {
   if (!root) return [];

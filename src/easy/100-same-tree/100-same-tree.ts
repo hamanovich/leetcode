@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/same-tree/
 
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 
 export const isSameTree = (p?: BinaryTreeNode | null, q?: BinaryTreeNode | null): boolean => {
   if (!p && !q) return true;

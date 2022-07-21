@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 import { averageOfLevels } from './637-average-of-levels-in-binary-tree';
 
 describe('averageOfLevels', () => {

@@ -1,4 +1,4 @@
-import { LinkedList } from '../linked-list/linked-list';
+import { LinkedList } from '../../linked-list/linked-list';
 
 export class Stack<T = unknown> {
   #list = new LinkedList();

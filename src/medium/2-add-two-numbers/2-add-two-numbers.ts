@@ -1,4 +1,4 @@
-import { LinkedListNode } from '../../common/linked-list/linked-list-node';
+import { LinkedListNode } from '../../common/linked-list/linked-list-node/linked-list-node';
 
 export const addTwoNumbers = (l1: LinkedListNode | null, l2: LinkedListNode | null): LinkedListNode | null => {
   if (!l1) return l2;

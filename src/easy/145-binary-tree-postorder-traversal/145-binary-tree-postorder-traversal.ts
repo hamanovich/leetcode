@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/binary-tree-postorder-traversal/
 
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 
 export const postorderTraversal = (root?: BinaryTreeNode | null): number[] => {
   if (!root) return [];

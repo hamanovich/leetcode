@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 import { postorderTraversal } from './145-binary-tree-postorder-traversal';
 
 describe('postorderTraversal', () => {

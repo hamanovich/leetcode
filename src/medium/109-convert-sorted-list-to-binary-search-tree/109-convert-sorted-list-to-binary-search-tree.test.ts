@@ -1,7 +1,7 @@
-import { LinkedListNode } from '../../common/linked-list/linked-list-node';
+import { LinkedListNode } from '../../common/linked-list/linked-list-node/linked-list-node';
 import { LinkedList } from '../../common/linked-list/linked-list';
 import { sortedListToBST } from './109-convert-sorted-list-to-binary-search-tree';
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 
 describe('sortedListToBST', () => {
   test('Input: head = [-10,-3,0,5,9]; Output: [0,-3,9,-10,null,5]', () => {

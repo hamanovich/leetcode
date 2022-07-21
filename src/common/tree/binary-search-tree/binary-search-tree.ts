@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from './binary-tree-node';
+import { BinaryTreeNode } from '../binary-tree-node/binary-tree-node';
 
 export class BinarySearchTree {
   root: BinaryTreeNode | null;

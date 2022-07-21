@@ -1,4 +1,4 @@
-import { LinkedListNode } from './../../common/linked-list/linked-list-node';
+import { LinkedListNode } from '../../common/linked-list/linked-list-node/linked-list-node';
 import { LinkedList } from '../../common/linked-list/linked-list';
 import { removeNthFromEnd } from './19-remove-nth-node-from-end';
 import { removeNthFromEnd as removeNthFromEnd2 } from './19-remove-nth-node-from-end-2';

@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/average-of-levels-in-binary-tree/
 
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 
 export const averageOfLevels = (root: BinaryTreeNode | null): number[] => {
   let queue = [root];

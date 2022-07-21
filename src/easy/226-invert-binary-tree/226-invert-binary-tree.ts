@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/invert-binary-tree/
 
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 
 export const invertTree = (root: BinaryTreeNode | null): BinaryTreeNode | null => {
   if (!root) return null;

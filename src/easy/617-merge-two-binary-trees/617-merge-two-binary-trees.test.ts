@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 import { mergeTrees } from './617-merge-two-binary-trees';
 
 describe('mergeTrees', () => {

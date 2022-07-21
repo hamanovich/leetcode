@@ -1,4 +1,4 @@
-import { LinkedListNode } from './linked-list-node';
+import { LinkedListNode } from './linked-list-node/linked-list-node';
 
 export class LinkedList<T = unknown> {
   head: LinkedListNode<T> | null;
@@ -37,13 +37,16 @@ export class LinkedList<T = unknown> {
     return this;
   }
 
-  find(value: T): LinkedListNode | null {
-    let currentNode = this.head as LinkedListNode;
+  find({ value, callback }: { value?: T; callback?: (value: T) => boolean }): LinkedListNode | null {
+    if (!this.head) return null;
+
+    let currentNode = this.head;
 
     while (currentNode) {
+      if (callback && callback(currentNode.value)) return currentNode;
       if (value !== undefined && currentNode.value === value) return currentNode;
 
-      currentNode = currentNode.next as LinkedListNode;
+      currentNode = currentNode.next as LinkedListNode<T>;
     }
 
     return null;
@@ -129,25 +132,24 @@ export class LinkedList<T = unknown> {
     this.tail = null;
   }
 
-  toArray(): LinkedListNode[] | null {
-    const nodes: LinkedListNode[] = [];
+  toArray(): LinkedListNode<T>[] {
+    const nodes: LinkedListNode<T>[] = [];
 
-    if (!this.head) return null;
+    if (!this.head) return [];
 
-    let currentNode = this.head as LinkedListNode;
+    let currentNode = this.head as LinkedListNode<T>;
 
     while (currentNode) {
       nodes.push(currentNode);
-      currentNode = currentNode.next as LinkedListNode;
+      currentNode = currentNode.next as LinkedListNode<T>;
     }
 
     return nodes;
   }
 
   toString(callback?: (arg: T) => string): string | undefined {
-    if (!this.toArray()) return '';
     return this.toArray()
-      ?.map(node => node.toString(callback as ((arg: unknown) => string) | undefined))
+      .map(node => node.toString(callback as ((arg: unknown) => string) | undefined))
       .toString();
   }
 }

@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 import { levelOrder } from './102-binary-tree-level-order-traversal';
 
 describe('levelOrder', () => {

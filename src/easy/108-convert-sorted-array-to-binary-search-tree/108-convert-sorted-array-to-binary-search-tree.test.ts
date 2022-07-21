@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 import { sortedArrayToBST } from './108-convert-sorted-array-to-binary-search-tree';
 
 describe('sortedArrayToBST', () => {

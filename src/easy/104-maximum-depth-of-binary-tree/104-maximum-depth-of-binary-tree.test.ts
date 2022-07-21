@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 import { maxDepth as maxDepthDFS } from './104-maximum-depth-of-binary-tree';
 import { maxDepth as maxDepthBFS } from './104-maximum-depth-of-binary-tree-2';
 

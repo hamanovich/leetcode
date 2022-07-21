@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from '../../common/tree/binary-tree-node';
+import { BinaryTreeNode } from '../../common/tree/binary-tree-node/binary-tree-node';
 import { lowestCommonAncestor } from './235-lowest-common-ancestor-of-a-binary-search-tree';
 import { lowestCommonAncestor as lowestCommonAncestorRecursive } from './235-lowest-common-ancestor-of-a-binary-search-tree-2';
 
