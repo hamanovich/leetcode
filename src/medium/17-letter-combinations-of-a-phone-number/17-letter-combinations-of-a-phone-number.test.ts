@@ -10,7 +10,6 @@ describe('letterCombinations', () => {
   });
 
   test('Input: digits = "2"; Output: ["a","b","c"]', () => {
-    console.log('letterCombinations(2)', letterCombinations('2'));
     expect(letterCombinations('2')).toEqual(['a', 'b', 'c']);
   });
 });
