@@ -26,8 +26,6 @@ describe('hasPathSum', () => {
   });
 
   test('Input: root = [], targetSum = 0; Output: false', () => {
-    const tree = new BinaryTreeNode();
-
-    expect(hasPathSum(tree, 0)).toBeFalsy();
+    expect(hasPathSum(null, 0)).toBeFalsy();
   });
 });
