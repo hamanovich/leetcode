@@ -11,13 +11,18 @@ export const minDepth = (root?: BinaryTreeNode | null): number => {
   let depth = 0;
 
   while (queue.length) {
-    const node = queue.shift();
+    const len = queue.length;
     depth++;
 
-    if (!node?.left && !node?.right) break;
-    if (node?.left) queue.push(node.left);
-    if (node?.right) queue.push(node.right);
+    for (let i = 0; i < len; i++) {
+      const node = queue.shift();
+
+      if (!node?.left && !node?.right) return depth;
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+    }
   }
 
+  /* istanbul ignore next */
   return depth;
 };

@@ -25,6 +25,17 @@ describe('minDepth', () => {
     expect(minDepthBFS(tree)).toBe(5);
   });
 
+  test('Input: root = [1,2,3,4,5]; Output: 2', () => {
+    const tree = new BinaryTreeNode(1);
+    tree.left = new BinaryTreeNode(2);
+    tree.right = new BinaryTreeNode(3);
+    tree.left.left = new BinaryTreeNode(4);
+    tree.left.right = new BinaryTreeNode(5);
+
+    expect(minDepthDFS(tree)).toBe(2);
+    expect(minDepthBFS(tree)).toBe(2);
+  });
+
   test('root = []; Output: 0', () => {
     expect(minDepthDFS()).toBe(0);
     expect(minDepthBFS()).toBe(0);
