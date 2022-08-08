@@ -1,19 +1,9 @@
 export const twoSum = (nums: number[], target: number): number[] => {
-  let left = 0;
-  let right = nums.length - 1;
+  const map = new Map();
 
-  while (left < right) {
-    const sum = nums[left] + nums[right];
-
-    if (sum > target) {
-      left = 0;
-      right -= 1;
-    } else if (sum < target) {
-      left += 1;
-      right = nums.length - 1;
-    } else {
-      return [left, right];
-    }
+  for (let i = 0; i < nums.length; i++) {
+    if (map.has(target - nums[i])) return [map.get(target - nums[i]), i];
+    else map.set(nums[i], i);
   }
 
   return [];

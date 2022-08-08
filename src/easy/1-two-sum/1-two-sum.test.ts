@@ -9,6 +9,12 @@ describe('twoSum', () => {
     expect(twoSum3([2, 7, 11, 15], 9)).toStrictEqual([0, 1]);
   });
 
+  test('nums = [2,5,5,11], target = 10', () => {
+    expect(twoSum([2, 5, 5, 11], 10)).toStrictEqual([1, 2]);
+    expect(twoSum2([2, 5, 5, 11], 10)).toStrictEqual([1, 2]);
+    expect(twoSum3([2, 5, 5, 11], 10)).toStrictEqual([1, 2]);
+  });
+
   test('nums = [3,2,4], target = 6', () => {
     expect(twoSum([3, 2, 4], 6)).toStrictEqual([1, 2]);
     expect(twoSum2([3, 2, 4], 6)).toStrictEqual([1, 2]);
