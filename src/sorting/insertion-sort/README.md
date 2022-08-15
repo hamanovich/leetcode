@@ -5,5 +5,5 @@ Insertion sort is a simple sorting algorithm that builds the final sorted array 
 ## Complexity
 
 | Name               | Best |    Average    |     Worst     | Memory | Stable | Comments |
-|--------------------|:----:|:-------------:|:-------------:|:------:|:------:|:---------|
+| ------------------ | :--: | :-----------: | :-----------: | :----: | :----: | :------- |
 | **Insertion sort** |  n   | n<sup>2</sup> | n<sup>2</sup> |   1    |  Yes   |          |

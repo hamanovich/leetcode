@@ -5,5 +5,5 @@ Selection sort is a sorting algorithm, specifically an in-place comparison sort.
 ## Complexity
 
 | Name               |     Best      |    Average    |     Worst     | Memory | Stable | Comments |
-|--------------------|:-------------:|:-------------:|:-------------:|:------:|:------:|:---------|
+| ------------------ | :-----------: | :-----------: | :-----------: | :----: | :----: | :------- |
 | **Selection sort** | n<sup>2</sup> | n<sup>2</sup> | n<sup>2</sup> |   1    |   No   |          |

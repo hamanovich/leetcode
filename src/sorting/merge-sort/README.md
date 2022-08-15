@@ -9,5 +9,5 @@ A recursive merge sort algorithm used to sort an array of 7 integer values. Thes
 ## Complexity
 
 | Name           |     Best      |    Average    |     Worst     | Memory | Stable | Comments |
-|----------------|:-------------:|:-------------:|:-------------:|:------:|:------:|:---------|
+| -------------- | :-----------: | :-----------: | :-----------: | :----: | :----: | :------- |
 | **Merge sort** | n&nbsp;log(n) | n&nbsp;log(n) | n&nbsp;log(n) |   n    |  Yes   |          |
