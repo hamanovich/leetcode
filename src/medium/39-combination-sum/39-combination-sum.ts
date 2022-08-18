@@ -11,8 +11,7 @@ export const combinationSum = (candidates: number[], target: number): number[][]
     }
 
     for (let j = i; j < candidates.length; j++) {
-      const candidate = candidates[j];
-      dfs(j, target - candidate, result.concat([candidate]));
+      dfs(j, target - candidates[j], result.concat([candidates[j]]));
     }
   };
 
@@ -20,5 +19,3 @@ export const combinationSum = (candidates: number[], target: number): number[][]
 
   return ans;
 };
-
-combinationSum([2, 3, 6, 7], 7);
